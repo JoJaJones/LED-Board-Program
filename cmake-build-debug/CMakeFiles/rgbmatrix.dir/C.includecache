@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/CLionProjects/LED-Board-Program/lib/hardware-mapping.c
+hardware-mapping.h
+D:/CLionProjects/LED-Board-Program/lib/hardware-mapping.h
+
+D:/CLionProjects/LED-Board-Program/lib/hardware-mapping.h
+stdint.h
+-
+

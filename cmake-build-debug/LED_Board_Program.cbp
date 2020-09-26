@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="LED_Board_Program"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="D:/CLionProjects/LED-Board-Program/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;D:/CLionProjects/LED-Board-Program/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;D:/CLionProjects/LED-Board-Program/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;D:/CLionProjects/LED-Board-Program/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;D:/CLionProjects/LED-Board-Program/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="LED_Board_Program">
+				<Option output="D:/CLionProjects/LED-Board-Program/cmake-build-debug/LED_Board_Program.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/CLionProjects/LED-Board-Program/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="D:/CLionProjects/LED-Board-Program/lib/lib"/>
+					<Add directory="D:/CLionProjects/LED-Board-Program/lib/include"/>
+					<Add directory="D:/CLionProjects/LED-Board-Program/models"/>
+					<Add directory="D:/CLionProjects/LED-Board-Program/views"/>
+					<Add directory="D:/CLionProjects/LED-Board-Program/controllers"/>
+					<Add directory="D:/CLionProjects/LED-Board-Program/utils"/>
+					<Add directory="D:/CLionProjects/LED-Board-Program/services"/>
+					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/i686-w64-mingw32"/>
+					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/../../../../i686-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;D:/CLionProjects/LED-Board-Program/cmake-build-debug/Makefile&quot;  VERBOSE=1 LED_Board_Program"/>
+					<CompileFile command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;D:/CLionProjects/LED-Board-Program/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;D:/CLionProjects/LED-Board-Program/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;D:/CLionProjects/LED-Board-Program/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="LED_Board_Program/fast">
+				<Option output="D:/CLionProjects/LED-Board-Program/cmake-build-debug/LED_Board_Program.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/CLionProjects/LED-Board-Program/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="D:/CLionProjects/LED-Board-Program/lib/lib"/>
+					<Add directory="D:/CLionProjects/LED-Board-Program/lib/include"/>
+					<Add directory="D:/CLionProjects/LED-Board-Program/models"/>
+					<Add directory="D:/CLionProjects/LED-Board-Program/views"/>
+					<Add directory="D:/CLionProjects/LED-Board-Program/controllers"/>
+					<Add directory="D:/CLionProjects/LED-Board-Program/utils"/>
+					<Add directory="D:/CLionProjects/LED-Board-Program/services"/>
+					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/i686-w64-mingw32"/>
+					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/../../../../i686-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;D:/CLionProjects/LED-Board-Program/cmake-build-debug/Makefile&quot;  VERBOSE=1 LED_Board_Program/fast"/>
+					<CompileFile command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;D:/CLionProjects/LED-Board-Program/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;D:/CLionProjects/LED-Board-Program/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;D:/CLionProjects/LED-Board-Program/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="D:/CLionProjects/LED-Board-Program/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;D:/CLionProjects/LED-Board-Program/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;D:/CLionProjects/LED-Board-Program/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;D:/CLionProjects/LED-Board-Program/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;D:/CLionProjects/LED-Board-Program/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rgbmatrix">
+				<Option output="D:/CLionProjects/LED-Board-Program/cmake-build-debug/librgbmatrix.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/CLionProjects/LED-Board-Program/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="D:/CLionProjects/LED-Board-Program/lib/lib"/>
+					<Add directory="D:/CLionProjects/LED-Board-Program/lib/include"/>
+					<Add directory="D:/CLionProjects/LED-Board-Program/models"/>
+					<Add directory="D:/CLionProjects/LED-Board-Program/views"/>
+					<Add directory="D:/CLionProjects/LED-Board-Program/controllers"/>
+					<Add directory="D:/CLionProjects/LED-Board-Program/utils"/>
+					<Add directory="D:/CLionProjects/LED-Board-Program/services"/>
+					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/i686-w64-mingw32"/>
+					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/../../../../i686-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;D:/CLionProjects/LED-Board-Program/cmake-build-debug/Makefile&quot;  VERBOSE=1 rgbmatrix"/>
+					<CompileFile command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;D:/CLionProjects/LED-Board-Program/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;D:/CLionProjects/LED-Board-Program/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;D:/CLionProjects/LED-Board-Program/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rgbmatrix/fast">
+				<Option output="D:/CLionProjects/LED-Board-Program/cmake-build-debug/librgbmatrix.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/CLionProjects/LED-Board-Program/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="D:/CLionProjects/LED-Board-Program/lib/lib"/>
+					<Add directory="D:/CLionProjects/LED-Board-Program/lib/include"/>
+					<Add directory="D:/CLionProjects/LED-Board-Program/models"/>
+					<Add directory="D:/CLionProjects/LED-Board-Program/views"/>
+					<Add directory="D:/CLionProjects/LED-Board-Program/controllers"/>
+					<Add directory="D:/CLionProjects/LED-Board-Program/utils"/>
+					<Add directory="D:/CLionProjects/LED-Board-Program/services"/>
+					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/i686-w64-mingw32"/>
+					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/../../../../i686-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;D:/CLionProjects/LED-Board-Program/cmake-build-debug/Makefile&quot;  VERBOSE=1 rgbmatrix/fast"/>
+					<CompileFile command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;D:/CLionProjects/LED-Board-Program/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;D:/CLionProjects/LED-Board-Program/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;D:/CLionProjects/LED-Board-Program/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="D:/CLionProjects/LED-Board-Program/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;D:/CLionProjects/LED-Board-Program/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;D:/CLionProjects/LED-Board-Program/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;D:/CLionProjects/LED-Board-Program/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;D:/CLionProjects/LED-Board-Program/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="D:/CLionProjects/LED-Board-Program/controllers/LEDBoardEngine.cpp">
+			<Option target="LED_Board_Program"/>
+		</Unit>
+		<Unit filename="D:/CLionProjects/LED-Board-Program/controllers/LEDBoardEngine.hpp">
+			<Option target="LED_Board_Program"/>
+		</Unit>
+		<Unit filename="D:/CLionProjects/LED-Board-Program/lib/lib/bdf-font.cc">
+			<Option target="rgbmatrix"/>
+		</Unit>
+		<Unit filename="D:/CLionProjects/LED-Board-Program/lib/lib/content-streamer.cc">
+			<Option target="rgbmatrix"/>
+		</Unit>
+		<Unit filename="D:/CLionProjects/LED-Board-Program/lib/lib/framebuffer.cc">
+			<Option target="rgbmatrix"/>
+		</Unit>
+		<Unit filename="D:/CLionProjects/LED-Board-Program/lib/lib/gpio.cc">
+			<Option target="rgbmatrix"/>
+		</Unit>
+		<Unit filename="D:/CLionProjects/LED-Board-Program/lib/lib/graphics.cc">
+			<Option target="rgbmatrix"/>
+		</Unit>
+		<Unit filename="D:/CLionProjects/LED-Board-Program/lib/lib/hardware-mapping.c">
+			<Option target="rgbmatrix"/>
+		</Unit>
+		<Unit filename="D:/CLionProjects/LED-Board-Program/lib/lib/hardware-mapping.h">
+			<Option target="rgbmatrix"/>
+		</Unit>
+		<Unit filename="D:/CLionProjects/LED-Board-Program/lib/lib/led-matrix.cc">
+			<Option target="rgbmatrix"/>
+		</Unit>
+		<Unit filename="D:/CLionProjects/LED-Board-Program/lib/lib/multiplex-mappers.cc">
+			<Option target="rgbmatrix"/>
+		</Unit>
+		<Unit filename="D:/CLionProjects/LED-Board-Program/lib/lib/options-initialize.cc">
+			<Option target="rgbmatrix"/>
+		</Unit>
+		<Unit filename="D:/CLionProjects/LED-Board-Program/lib/lib/pixel-mapper.cc">
+			<Option target="rgbmatrix"/>
+		</Unit>
+		<Unit filename="D:/CLionProjects/LED-Board-Program/lib/lib/thread.cc">
+			<Option target="rgbmatrix"/>
+		</Unit>
+		<Unit filename="D:/CLionProjects/LED-Board-Program/lib/lib/transformer.cc">
+			<Option target="rgbmatrix"/>
+		</Unit>
+		<Unit filename="D:/CLionProjects/LED-Board-Program/main.cpp">
+			<Option target="LED_Board_Program"/>
+		</Unit>
+		<Unit filename="D:/CLionProjects/LED-Board-Program/models/Model.cpp">
+			<Option target="LED_Board_Program"/>
+		</Unit>
+		<Unit filename="D:/CLionProjects/LED-Board-Program/models/Model.hpp">
+			<Option target="LED_Board_Program"/>
+		</Unit>
+		<Unit filename="D:/CLionProjects/LED-Board-Program/services/DataState.cpp">
+			<Option target="LED_Board_Program"/>
+		</Unit>
+		<Unit filename="D:/CLionProjects/LED-Board-Program/services/DataState.hpp">
+			<Option target="LED_Board_Program"/>
+		</Unit>
+		<Unit filename="D:/CLionProjects/LED-Board-Program/services/board_constants.hpp">
+			<Option target="LED_Board_Program"/>
+		</Unit>
+		<Unit filename="D:/CLionProjects/LED-Board-Program/services/constants.hpp">
+			<Option target="LED_Board_Program"/>
+		</Unit>
+		<Unit filename="D:/CLionProjects/LED-Board-Program/views/LEDDisplay.cpp">
+			<Option target="LED_Board_Program"/>
+		</Unit>
+		<Unit filename="D:/CLionProjects/LED-Board-Program/views/LEDDisplay.hpp">
+			<Option target="LED_Board_Program"/>
+		</Unit>
+		<Unit filename="D:/CLionProjects/LED-Board-Program/views/View.cpp">
+			<Option target="LED_Board_Program"/>
+		</Unit>
+		<Unit filename="D:/CLionProjects/LED-Board-Program/views/View.hpp">
+			<Option target="LED_Board_Program"/>
+		</Unit>
+		<Unit filename="D:/CLionProjects/LED-Board-Program/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
