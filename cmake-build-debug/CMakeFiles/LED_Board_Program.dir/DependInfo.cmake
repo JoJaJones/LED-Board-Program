@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "D:/CLionProjects/LED-Board-Program/main.cpp" "D:/CLionProjects/LED-Board-Program/cmake-build-debug/CMakeFiles/LED_Board_Program.dir/main.cpp.obj"
   "D:/CLionProjects/LED-Board-Program/models/Model.cpp" "D:/CLionProjects/LED-Board-Program/cmake-build-debug/CMakeFiles/LED_Board_Program.dir/models/Model.cpp.obj"
   "D:/CLionProjects/LED-Board-Program/services/DataState.cpp" "D:/CLionProjects/LED-Board-Program/cmake-build-debug/CMakeFiles/LED_Board_Program.dir/services/DataState.cpp.obj"
+  "D:/CLionProjects/LED-Board-Program/tests/DataStateTests.cpp" "D:/CLionProjects/LED-Board-Program/cmake-build-debug/CMakeFiles/LED_Board_Program.dir/tests/DataStateTests.cpp.obj"
   "D:/CLionProjects/LED-Board-Program/views/LEDDisplay.cpp" "D:/CLionProjects/LED-Board-Program/cmake-build-debug/CMakeFiles/LED_Board_Program.dir/views/LEDDisplay.cpp.obj"
   "D:/CLionProjects/LED-Board-Program/views/View.cpp" "D:/CLionProjects/LED-Board-Program/cmake-build-debug/CMakeFiles/LED_Board_Program.dir/views/View.cpp.obj"
   )
@@ -22,6 +23,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../controllers"
   "../utils"
   "../services"
+  "../tests"
   )
 
 # Targets to which this target links.

@@ -130,6 +130,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named Test_DataState
+
+# Build rule for target.
+Test_DataState: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Test_DataState
+.PHONY : Test_DataState
+
+# fast build rule for target.
+Test_DataState/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_DataState.dir\build.make CMakeFiles/Test_DataState.dir/build
+.PHONY : Test_DataState/fast
+
+#=============================================================================
 # Target rules for targets named LED_Board_Program
 
 # Build rule for target.
@@ -566,6 +579,7 @@ services/DataState.obj: services/DataState.cpp.obj
 
 # target to build an object file
 services/DataState.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_DataState.dir\build.make CMakeFiles/Test_DataState.dir/services/DataState.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\LED_Board_Program.dir\build.make CMakeFiles/LED_Board_Program.dir/services/DataState.cpp.obj
 .PHONY : services/DataState.cpp.obj
 
@@ -575,6 +589,7 @@ services/DataState.i: services/DataState.cpp.i
 
 # target to preprocess a source file
 services/DataState.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_DataState.dir\build.make CMakeFiles/Test_DataState.dir/services/DataState.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\LED_Board_Program.dir\build.make CMakeFiles/LED_Board_Program.dir/services/DataState.cpp.i
 .PHONY : services/DataState.cpp.i
 
@@ -584,8 +599,39 @@ services/DataState.s: services/DataState.cpp.s
 
 # target to generate assembly for a file
 services/DataState.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_DataState.dir\build.make CMakeFiles/Test_DataState.dir/services/DataState.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\LED_Board_Program.dir\build.make CMakeFiles/LED_Board_Program.dir/services/DataState.cpp.s
 .PHONY : services/DataState.cpp.s
+
+tests/DataStateTests.obj: tests/DataStateTests.cpp.obj
+
+.PHONY : tests/DataStateTests.obj
+
+# target to build an object file
+tests/DataStateTests.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_DataState.dir\build.make CMakeFiles/Test_DataState.dir/tests/DataStateTests.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LED_Board_Program.dir\build.make CMakeFiles/LED_Board_Program.dir/tests/DataStateTests.cpp.obj
+.PHONY : tests/DataStateTests.cpp.obj
+
+tests/DataStateTests.i: tests/DataStateTests.cpp.i
+
+.PHONY : tests/DataStateTests.i
+
+# target to preprocess a source file
+tests/DataStateTests.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_DataState.dir\build.make CMakeFiles/Test_DataState.dir/tests/DataStateTests.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LED_Board_Program.dir\build.make CMakeFiles/LED_Board_Program.dir/tests/DataStateTests.cpp.i
+.PHONY : tests/DataStateTests.cpp.i
+
+tests/DataStateTests.s: tests/DataStateTests.cpp.s
+
+.PHONY : tests/DataStateTests.s
+
+# target to generate assembly for a file
+tests/DataStateTests.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_DataState.dir\build.make CMakeFiles/Test_DataState.dir/tests/DataStateTests.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LED_Board_Program.dir\build.make CMakeFiles/LED_Board_Program.dir/tests/DataStateTests.cpp.s
+.PHONY : tests/DataStateTests.cpp.s
 
 views/LEDDisplay.obj: views/LEDDisplay.cpp.obj
 
@@ -650,6 +696,7 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... LED_Board_Program
+	@echo ... Test_DataState
 	@echo ... rgbmatrix
 	@echo ... controllers/LEDBoardEngine.obj
 	@echo ... controllers/LEDBoardEngine.i
@@ -699,6 +746,9 @@ help:
 	@echo ... services/DataState.obj
 	@echo ... services/DataState.i
 	@echo ... services/DataState.s
+	@echo ... tests/DataStateTests.obj
+	@echo ... tests/DataStateTests.i
+	@echo ... tests/DataStateTests.s
 	@echo ... views/LEDDisplay.obj
 	@echo ... views/LEDDisplay.i
 	@echo ... views/LEDDisplay.s

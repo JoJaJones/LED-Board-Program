@@ -6,6 +6,6 @@
 #define LED_BOARD_PROGRAM_CONSTANTS_HPP
 namespace LEDBoard {
     const int R_IDX = 0;
-    const int C_IDX = 0;
+    const int C_IDX = 1;
 }
 #endif //LED_BOARD_PROGRAM_CONSTANTS_HPP

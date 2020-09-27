@@ -18,6 +18,7 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
   "../controllers"
   "../utils"
   "../services"
+  "../tests"
   )
 set(CMAKE_DEPENDS_CHECK_CXX
   "D:/CLionProjects/LED-Board-Program/lib/lib/bdf-font.cc" "D:/CLionProjects/LED-Board-Program/cmake-build-debug/CMakeFiles/rgbmatrix.dir/lib/lib/bdf-font.cc.obj"
@@ -43,6 +44,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../controllers"
   "../utils"
   "../services"
+  "../tests"
   )
 
 # Targets to which this target links.

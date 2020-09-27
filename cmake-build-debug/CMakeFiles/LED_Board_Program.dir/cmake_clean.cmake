@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/LED_Board_Program.dir/main.cpp.obj"
   "CMakeFiles/LED_Board_Program.dir/models/Model.cpp.obj"
   "CMakeFiles/LED_Board_Program.dir/services/DataState.cpp.obj"
+  "CMakeFiles/LED_Board_Program.dir/tests/DataStateTests.cpp.obj"
   "CMakeFiles/LED_Board_Program.dir/views/LEDDisplay.cpp.obj"
   "CMakeFiles/LED_Board_Program.dir/views/View.cpp.obj"
   "LED_Board_Program.exe"

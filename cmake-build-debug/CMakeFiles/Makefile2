@@ -72,6 +72,7 @@ CMAKE_BINARY_DIR = D:\CLionProjects\LED-Board-Program\cmake-build-debug
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/Test_DataState.dir/all
 all: CMakeFiles/LED_Board_Program.dir/all
 all: CMakeFiles/rgbmatrix.dir/all
 
@@ -83,10 +84,38 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/Test_DataState.dir/clean
 clean: CMakeFiles/LED_Board_Program.dir/clean
 clean: CMakeFiles/rgbmatrix.dir/clean
 
 .PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/Test_DataState.dir
+
+# All Build rule for target.
+CMakeFiles/Test_DataState.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_DataState.dir\build.make CMakeFiles/Test_DataState.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_DataState.dir\build.make CMakeFiles/Test_DataState.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\CLionProjects\LED-Board-Program\cmake-build-debug\CMakeFiles --progress-num=9,10,11 "Built target Test_DataState"
+.PHONY : CMakeFiles/Test_DataState.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/Test_DataState.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\CLionProjects\LED-Board-Program\cmake-build-debug\CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/Test_DataState.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\CLionProjects\LED-Board-Program\cmake-build-debug\CMakeFiles 0
+.PHONY : CMakeFiles/Test_DataState.dir/rule
+
+# Convenience name for target.
+Test_DataState: CMakeFiles/Test_DataState.dir/rule
+
+.PHONY : Test_DataState
+
+# clean rule for target.
+CMakeFiles/Test_DataState.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_DataState.dir\build.make CMakeFiles/Test_DataState.dir/clean
+.PHONY : CMakeFiles/Test_DataState.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/LED_Board_Program.dir
@@ -95,12 +124,12 @@ clean: CMakeFiles/rgbmatrix.dir/clean
 CMakeFiles/LED_Board_Program.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\LED_Board_Program.dir\build.make CMakeFiles/LED_Board_Program.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\LED_Board_Program.dir\build.make CMakeFiles/LED_Board_Program.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\CLionProjects\LED-Board-Program\cmake-build-debug\CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target LED_Board_Program"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\CLionProjects\LED-Board-Program\cmake-build-debug\CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Built target LED_Board_Program"
 .PHONY : CMakeFiles/LED_Board_Program.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/LED_Board_Program.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\CLionProjects\LED-Board-Program\cmake-build-debug\CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\CLionProjects\LED-Board-Program\cmake-build-debug\CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/LED_Board_Program.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start D:\CLionProjects\LED-Board-Program\cmake-build-debug\CMakeFiles 0
 .PHONY : CMakeFiles/LED_Board_Program.dir/rule
@@ -122,7 +151,7 @@ CMakeFiles/LED_Board_Program.dir/clean:
 CMakeFiles/rgbmatrix.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\rgbmatrix.dir\build.make CMakeFiles/rgbmatrix.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\rgbmatrix.dir\build.make CMakeFiles/rgbmatrix.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\CLionProjects\LED-Board-Program\cmake-build-debug\CMakeFiles --progress-num=8,9,10,11,12,13,14,15,16,17,18,19,20 "Built target rgbmatrix"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\CLionProjects\LED-Board-Program\cmake-build-debug\CMakeFiles --progress-num=12,13,14,15,16,17,18,19,20,21,22,23,24 "Built target rgbmatrix"
 .PHONY : CMakeFiles/rgbmatrix.dir/all
 
 # Build rule for subdir invocation for target.
