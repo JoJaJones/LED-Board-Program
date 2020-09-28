@@ -7,7 +7,8 @@ set(CMAKE_CXX_STANDARD 14)
 #add_executable(Test_DataState tests/DataStateTests.cpp services/DataState.cpp)
 add_executable(Test_RandomPixel tests/RandomPixelAnimTest.cpp services/DataState.cpp
         models/Model.cpp models/animations/Animation.cpp models/animations/RandomPixels.cpp)
-
+add_executable(Test_GradualGradient tests/GradualGradientTests.cpp services/DataState.cpp models/Model.cpp
+        models/animations/Animation.cpp models/animations/GradualGradient.cpp)
 
 #main executable
 #add_executable(LED_Board_Program main.cpp models/Model.cpp models/Model.hpp services/board_constants.hpp views/LEDDisplay.cpp views/LEDDisplay.hpp services/DataState.cpp services/DataState.hpp controllers/LEDBoardEngine.cpp controllers/LEDBoardEngine.hpp views/View.cpp views/View.hpp services/constants.hpp tests/DataStateTests.cpp models/animations/Animation.cpp models/animations/Animation.hpp models/games/Game.cpp models/games/Game.hpp models/Position.cpp models/Position.hpp models/simulations/Simulation.cpp models/simulations/Simulation.hpp models/animations/RandomPixels.cpp models/animations/RandomPixels.hpp tests/RandomPixelAnimTest.cpp)

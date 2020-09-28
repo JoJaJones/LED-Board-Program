@@ -54,4 +54,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/Test_RandomPixel.dir/DependInfo.cmake"
+  "CMakeFiles/Test_GradualGradient.dir/DependInfo.cmake"
   )

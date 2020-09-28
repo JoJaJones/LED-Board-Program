@@ -10,11 +10,11 @@
 namespace LEDBoard {
     class Animation : public Model<int> {
     public:
-        using Model<int>::Model;
 
-        explicit Animation(DataState *state):Model(state){
-
-        };
+        explicit Animation(DataState *state);
+        Animation(DataState *state, int startVal);
+        void initBoard(int val);
+        void resetBoard(int val);
     };
 }
 

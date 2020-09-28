@@ -142,6 +142,19 @@ Test_RandomPixel/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_RandomPixel.dir\build.make CMakeFiles/Test_RandomPixel.dir/build
 .PHONY : Test_RandomPixel/fast
 
+#=============================================================================
+# Target rules for targets named Test_GradualGradient
+
+# Build rule for target.
+Test_GradualGradient: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Test_GradualGradient
+.PHONY : Test_GradualGradient
+
+# fast build rule for target.
+Test_GradualGradient/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_GradualGradient.dir\build.make CMakeFiles/Test_GradualGradient.dir/build
+.PHONY : Test_GradualGradient/fast
+
 models/Model.obj: models/Model.cpp.obj
 
 .PHONY : models/Model.obj
@@ -149,6 +162,7 @@ models/Model.obj: models/Model.cpp.obj
 # target to build an object file
 models/Model.cpp.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_RandomPixel.dir\build.make CMakeFiles/Test_RandomPixel.dir/models/Model.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_GradualGradient.dir\build.make CMakeFiles/Test_GradualGradient.dir/models/Model.cpp.obj
 .PHONY : models/Model.cpp.obj
 
 models/Model.i: models/Model.cpp.i
@@ -158,6 +172,7 @@ models/Model.i: models/Model.cpp.i
 # target to preprocess a source file
 models/Model.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_RandomPixel.dir\build.make CMakeFiles/Test_RandomPixel.dir/models/Model.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_GradualGradient.dir\build.make CMakeFiles/Test_GradualGradient.dir/models/Model.cpp.i
 .PHONY : models/Model.cpp.i
 
 models/Model.s: models/Model.cpp.s
@@ -167,6 +182,7 @@ models/Model.s: models/Model.cpp.s
 # target to generate assembly for a file
 models/Model.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_RandomPixel.dir\build.make CMakeFiles/Test_RandomPixel.dir/models/Model.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_GradualGradient.dir\build.make CMakeFiles/Test_GradualGradient.dir/models/Model.cpp.s
 .PHONY : models/Model.cpp.s
 
 models/animations/Animation.obj: models/animations/Animation.cpp.obj
@@ -176,6 +192,7 @@ models/animations/Animation.obj: models/animations/Animation.cpp.obj
 # target to build an object file
 models/animations/Animation.cpp.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_RandomPixel.dir\build.make CMakeFiles/Test_RandomPixel.dir/models/animations/Animation.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_GradualGradient.dir\build.make CMakeFiles/Test_GradualGradient.dir/models/animations/Animation.cpp.obj
 .PHONY : models/animations/Animation.cpp.obj
 
 models/animations/Animation.i: models/animations/Animation.cpp.i
@@ -185,6 +202,7 @@ models/animations/Animation.i: models/animations/Animation.cpp.i
 # target to preprocess a source file
 models/animations/Animation.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_RandomPixel.dir\build.make CMakeFiles/Test_RandomPixel.dir/models/animations/Animation.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_GradualGradient.dir\build.make CMakeFiles/Test_GradualGradient.dir/models/animations/Animation.cpp.i
 .PHONY : models/animations/Animation.cpp.i
 
 models/animations/Animation.s: models/animations/Animation.cpp.s
@@ -194,7 +212,35 @@ models/animations/Animation.s: models/animations/Animation.cpp.s
 # target to generate assembly for a file
 models/animations/Animation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_RandomPixel.dir\build.make CMakeFiles/Test_RandomPixel.dir/models/animations/Animation.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_GradualGradient.dir\build.make CMakeFiles/Test_GradualGradient.dir/models/animations/Animation.cpp.s
 .PHONY : models/animations/Animation.cpp.s
+
+models/animations/GradualGradient.obj: models/animations/GradualGradient.cpp.obj
+
+.PHONY : models/animations/GradualGradient.obj
+
+# target to build an object file
+models/animations/GradualGradient.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_GradualGradient.dir\build.make CMakeFiles/Test_GradualGradient.dir/models/animations/GradualGradient.cpp.obj
+.PHONY : models/animations/GradualGradient.cpp.obj
+
+models/animations/GradualGradient.i: models/animations/GradualGradient.cpp.i
+
+.PHONY : models/animations/GradualGradient.i
+
+# target to preprocess a source file
+models/animations/GradualGradient.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_GradualGradient.dir\build.make CMakeFiles/Test_GradualGradient.dir/models/animations/GradualGradient.cpp.i
+.PHONY : models/animations/GradualGradient.cpp.i
+
+models/animations/GradualGradient.s: models/animations/GradualGradient.cpp.s
+
+.PHONY : models/animations/GradualGradient.s
+
+# target to generate assembly for a file
+models/animations/GradualGradient.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_GradualGradient.dir\build.make CMakeFiles/Test_GradualGradient.dir/models/animations/GradualGradient.cpp.s
+.PHONY : models/animations/GradualGradient.cpp.s
 
 models/animations/RandomPixels.obj: models/animations/RandomPixels.cpp.obj
 
@@ -230,6 +276,7 @@ services/DataState.obj: services/DataState.cpp.obj
 # target to build an object file
 services/DataState.cpp.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_RandomPixel.dir\build.make CMakeFiles/Test_RandomPixel.dir/services/DataState.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_GradualGradient.dir\build.make CMakeFiles/Test_GradualGradient.dir/services/DataState.cpp.obj
 .PHONY : services/DataState.cpp.obj
 
 services/DataState.i: services/DataState.cpp.i
@@ -239,6 +286,7 @@ services/DataState.i: services/DataState.cpp.i
 # target to preprocess a source file
 services/DataState.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_RandomPixel.dir\build.make CMakeFiles/Test_RandomPixel.dir/services/DataState.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_GradualGradient.dir\build.make CMakeFiles/Test_GradualGradient.dir/services/DataState.cpp.i
 .PHONY : services/DataState.cpp.i
 
 services/DataState.s: services/DataState.cpp.s
@@ -248,7 +296,35 @@ services/DataState.s: services/DataState.cpp.s
 # target to generate assembly for a file
 services/DataState.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_RandomPixel.dir\build.make CMakeFiles/Test_RandomPixel.dir/services/DataState.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_GradualGradient.dir\build.make CMakeFiles/Test_GradualGradient.dir/services/DataState.cpp.s
 .PHONY : services/DataState.cpp.s
+
+tests/GradualGradientTests.obj: tests/GradualGradientTests.cpp.obj
+
+.PHONY : tests/GradualGradientTests.obj
+
+# target to build an object file
+tests/GradualGradientTests.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_GradualGradient.dir\build.make CMakeFiles/Test_GradualGradient.dir/tests/GradualGradientTests.cpp.obj
+.PHONY : tests/GradualGradientTests.cpp.obj
+
+tests/GradualGradientTests.i: tests/GradualGradientTests.cpp.i
+
+.PHONY : tests/GradualGradientTests.i
+
+# target to preprocess a source file
+tests/GradualGradientTests.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_GradualGradient.dir\build.make CMakeFiles/Test_GradualGradient.dir/tests/GradualGradientTests.cpp.i
+.PHONY : tests/GradualGradientTests.cpp.i
+
+tests/GradualGradientTests.s: tests/GradualGradientTests.cpp.s
+
+.PHONY : tests/GradualGradientTests.s
+
+# target to generate assembly for a file
+tests/GradualGradientTests.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_GradualGradient.dir\build.make CMakeFiles/Test_GradualGradient.dir/tests/GradualGradientTests.cpp.s
+.PHONY : tests/GradualGradientTests.cpp.s
 
 tests/RandomPixelAnimTest.obj: tests/RandomPixelAnimTest.cpp.obj
 
@@ -285,6 +361,7 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... Test_GradualGradient
 	@echo ... Test_RandomPixel
 	@echo ... models/Model.obj
 	@echo ... models/Model.i
@@ -292,12 +369,18 @@ help:
 	@echo ... models/animations/Animation.obj
 	@echo ... models/animations/Animation.i
 	@echo ... models/animations/Animation.s
+	@echo ... models/animations/GradualGradient.obj
+	@echo ... models/animations/GradualGradient.i
+	@echo ... models/animations/GradualGradient.s
 	@echo ... models/animations/RandomPixels.obj
 	@echo ... models/animations/RandomPixels.i
 	@echo ... models/animations/RandomPixels.s
 	@echo ... services/DataState.obj
 	@echo ... services/DataState.i
 	@echo ... services/DataState.s
+	@echo ... tests/GradualGradientTests.obj
+	@echo ... tests/GradualGradientTests.i
+	@echo ... tests/GradualGradientTests.s
 	@echo ... tests/RandomPixelAnimTest.obj
 	@echo ... tests/RandomPixelAnimTest.i
 	@echo ... tests/RandomPixelAnimTest.s

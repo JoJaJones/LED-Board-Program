@@ -3,6 +3,8 @@
 //
 
 #include "Model.hpp"
+
+// prevents linker issue when inheriting from the specialized class Animation
 template class LEDBoard::Model<int>;
 
 template <class T>
@@ -31,11 +33,5 @@ LEDBoard::Model<T>::~Model() {
 template<class T>
 LEDBoard::Model<T>::Model(LEDBoard::DataState *state) {
     viewBoard = state;
-    for (int i = 0; i < LEDBoard::LED_ROWS_PER_BOARD * LEDBoard::NUM_ROWS_OF_PANELS; ++i) {
-        board.emplace_back();
-        for (int j = 0; j < LEDBoard::LED_COLS_PER_BOARD * LEDBoard::NUM_COLS_OF_PANELS; ++j) {
-            board[i].push_back(5);
-        }
-    }
 }
 

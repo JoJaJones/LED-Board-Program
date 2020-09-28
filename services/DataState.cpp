@@ -80,6 +80,7 @@ void LEDBoard::DataState::convertPos(int *pos) {
     }
 }
 
+// pos in r, c
 void LEDBoard::DataState::setPixel(int *pos, int colorValue, bool isRawPos) {
     if(isRawPos) {
         convertPos(pos);
@@ -157,4 +158,6 @@ void LEDBoard::DataState::printBoard() {
         }
         std::cout<<std::endl;
     }
+
+    std::cout<<std::endl;
 }

@@ -73,6 +73,7 @@ CMAKE_BINARY_DIR = D:\CLionProjects\LED-Board-Program\cmake-build-debug
 
 # The main recursive "all" target.
 all: CMakeFiles/Test_RandomPixel.dir/all
+all: CMakeFiles/Test_GradualGradient.dir/all
 
 .PHONY : all
 
@@ -83,6 +84,7 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/Test_RandomPixel.dir/clean
+clean: CMakeFiles/Test_GradualGradient.dir/clean
 
 .PHONY : clean
 
@@ -93,7 +95,7 @@ clean: CMakeFiles/Test_RandomPixel.dir/clean
 CMakeFiles/Test_RandomPixel.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_RandomPixel.dir\build.make CMakeFiles/Test_RandomPixel.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_RandomPixel.dir\build.make CMakeFiles/Test_RandomPixel.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\CLionProjects\LED-Board-Program\cmake-build-debug\CMakeFiles --progress-num=1,2,3,4,5,6 "Built target Test_RandomPixel"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\CLionProjects\LED-Board-Program\cmake-build-debug\CMakeFiles --progress-num=7,8,9,10,11,12 "Built target Test_RandomPixel"
 .PHONY : CMakeFiles/Test_RandomPixel.dir/all
 
 # Build rule for subdir invocation for target.
@@ -112,6 +114,33 @@ Test_RandomPixel: CMakeFiles/Test_RandomPixel.dir/rule
 CMakeFiles/Test_RandomPixel.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_RandomPixel.dir\build.make CMakeFiles/Test_RandomPixel.dir/clean
 .PHONY : CMakeFiles/Test_RandomPixel.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/Test_GradualGradient.dir
+
+# All Build rule for target.
+CMakeFiles/Test_GradualGradient.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_GradualGradient.dir\build.make CMakeFiles/Test_GradualGradient.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_GradualGradient.dir\build.make CMakeFiles/Test_GradualGradient.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\CLionProjects\LED-Board-Program\cmake-build-debug\CMakeFiles --progress-num=1,2,3,4,5,6 "Built target Test_GradualGradient"
+.PHONY : CMakeFiles/Test_GradualGradient.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/Test_GradualGradient.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\CLionProjects\LED-Board-Program\cmake-build-debug\CMakeFiles 6
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/Test_GradualGradient.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\CLionProjects\LED-Board-Program\cmake-build-debug\CMakeFiles 0
+.PHONY : CMakeFiles/Test_GradualGradient.dir/rule
+
+# Convenience name for target.
+Test_GradualGradient: CMakeFiles/Test_GradualGradient.dir/rule
+
+.PHONY : Test_GradualGradient
+
+# clean rule for target.
+CMakeFiles/Test_GradualGradient.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_GradualGradient.dir\build.make CMakeFiles/Test_GradualGradient.dir/clean
+.PHONY : CMakeFiles/Test_GradualGradient.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

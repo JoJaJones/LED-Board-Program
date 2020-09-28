@@ -3,8 +3,6 @@
 //
 
 #include <animations/RandomPixels.hpp>
-#include <Model.hpp>
-
 
 int main(){
     auto *state = new LEDBoard::DataState();
