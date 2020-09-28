@@ -75,17 +75,6 @@ CMAKE_BINARY_DIR = D:\CLionProjects\LED-Board-Program\cmake-build-debug
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	"D:\Program Files\JetBrains\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -96,6 +85,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	"D:\Program Files\JetBrains\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -130,421 +130,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Test_DataState
+# Target rules for targets named Test_RandomPixel
 
 # Build rule for target.
-Test_DataState: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Test_DataState
-.PHONY : Test_DataState
+Test_RandomPixel: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Test_RandomPixel
+.PHONY : Test_RandomPixel
 
 # fast build rule for target.
-Test_DataState/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_DataState.dir\build.make CMakeFiles/Test_DataState.dir/build
-.PHONY : Test_DataState/fast
-
-#=============================================================================
-# Target rules for targets named LED_Board_Program
-
-# Build rule for target.
-LED_Board_Program: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 LED_Board_Program
-.PHONY : LED_Board_Program
-
-# fast build rule for target.
-LED_Board_Program/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LED_Board_Program.dir\build.make CMakeFiles/LED_Board_Program.dir/build
-.PHONY : LED_Board_Program/fast
-
-#=============================================================================
-# Target rules for targets named rgbmatrix
-
-# Build rule for target.
-rgbmatrix: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 rgbmatrix
-.PHONY : rgbmatrix
-
-# fast build rule for target.
-rgbmatrix/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\rgbmatrix.dir\build.make CMakeFiles/rgbmatrix.dir/build
-.PHONY : rgbmatrix/fast
-
-controllers/LEDBoardEngine.obj: controllers/LEDBoardEngine.cpp.obj
-
-.PHONY : controllers/LEDBoardEngine.obj
-
-# target to build an object file
-controllers/LEDBoardEngine.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LED_Board_Program.dir\build.make CMakeFiles/LED_Board_Program.dir/controllers/LEDBoardEngine.cpp.obj
-.PHONY : controllers/LEDBoardEngine.cpp.obj
-
-controllers/LEDBoardEngine.i: controllers/LEDBoardEngine.cpp.i
-
-.PHONY : controllers/LEDBoardEngine.i
-
-# target to preprocess a source file
-controllers/LEDBoardEngine.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LED_Board_Program.dir\build.make CMakeFiles/LED_Board_Program.dir/controllers/LEDBoardEngine.cpp.i
-.PHONY : controllers/LEDBoardEngine.cpp.i
-
-controllers/LEDBoardEngine.s: controllers/LEDBoardEngine.cpp.s
-
-.PHONY : controllers/LEDBoardEngine.s
-
-# target to generate assembly for a file
-controllers/LEDBoardEngine.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LED_Board_Program.dir\build.make CMakeFiles/LED_Board_Program.dir/controllers/LEDBoardEngine.cpp.s
-.PHONY : controllers/LEDBoardEngine.cpp.s
-
-lib/lib/bdf-font.obj: lib/lib/bdf-font.cc.obj
-
-.PHONY : lib/lib/bdf-font.obj
-
-# target to build an object file
-lib/lib/bdf-font.cc.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\rgbmatrix.dir\build.make CMakeFiles/rgbmatrix.dir/lib/lib/bdf-font.cc.obj
-.PHONY : lib/lib/bdf-font.cc.obj
-
-lib/lib/bdf-font.i: lib/lib/bdf-font.cc.i
-
-.PHONY : lib/lib/bdf-font.i
-
-# target to preprocess a source file
-lib/lib/bdf-font.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\rgbmatrix.dir\build.make CMakeFiles/rgbmatrix.dir/lib/lib/bdf-font.cc.i
-.PHONY : lib/lib/bdf-font.cc.i
-
-lib/lib/bdf-font.s: lib/lib/bdf-font.cc.s
-
-.PHONY : lib/lib/bdf-font.s
-
-# target to generate assembly for a file
-lib/lib/bdf-font.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\rgbmatrix.dir\build.make CMakeFiles/rgbmatrix.dir/lib/lib/bdf-font.cc.s
-.PHONY : lib/lib/bdf-font.cc.s
-
-lib/lib/content-streamer.obj: lib/lib/content-streamer.cc.obj
-
-.PHONY : lib/lib/content-streamer.obj
-
-# target to build an object file
-lib/lib/content-streamer.cc.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\rgbmatrix.dir\build.make CMakeFiles/rgbmatrix.dir/lib/lib/content-streamer.cc.obj
-.PHONY : lib/lib/content-streamer.cc.obj
-
-lib/lib/content-streamer.i: lib/lib/content-streamer.cc.i
-
-.PHONY : lib/lib/content-streamer.i
-
-# target to preprocess a source file
-lib/lib/content-streamer.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\rgbmatrix.dir\build.make CMakeFiles/rgbmatrix.dir/lib/lib/content-streamer.cc.i
-.PHONY : lib/lib/content-streamer.cc.i
-
-lib/lib/content-streamer.s: lib/lib/content-streamer.cc.s
-
-.PHONY : lib/lib/content-streamer.s
-
-# target to generate assembly for a file
-lib/lib/content-streamer.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\rgbmatrix.dir\build.make CMakeFiles/rgbmatrix.dir/lib/lib/content-streamer.cc.s
-.PHONY : lib/lib/content-streamer.cc.s
-
-lib/lib/framebuffer.obj: lib/lib/framebuffer.cc.obj
-
-.PHONY : lib/lib/framebuffer.obj
-
-# target to build an object file
-lib/lib/framebuffer.cc.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\rgbmatrix.dir\build.make CMakeFiles/rgbmatrix.dir/lib/lib/framebuffer.cc.obj
-.PHONY : lib/lib/framebuffer.cc.obj
-
-lib/lib/framebuffer.i: lib/lib/framebuffer.cc.i
-
-.PHONY : lib/lib/framebuffer.i
-
-# target to preprocess a source file
-lib/lib/framebuffer.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\rgbmatrix.dir\build.make CMakeFiles/rgbmatrix.dir/lib/lib/framebuffer.cc.i
-.PHONY : lib/lib/framebuffer.cc.i
-
-lib/lib/framebuffer.s: lib/lib/framebuffer.cc.s
-
-.PHONY : lib/lib/framebuffer.s
-
-# target to generate assembly for a file
-lib/lib/framebuffer.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\rgbmatrix.dir\build.make CMakeFiles/rgbmatrix.dir/lib/lib/framebuffer.cc.s
-.PHONY : lib/lib/framebuffer.cc.s
-
-lib/lib/gpio.obj: lib/lib/gpio.cc.obj
-
-.PHONY : lib/lib/gpio.obj
-
-# target to build an object file
-lib/lib/gpio.cc.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\rgbmatrix.dir\build.make CMakeFiles/rgbmatrix.dir/lib/lib/gpio.cc.obj
-.PHONY : lib/lib/gpio.cc.obj
-
-lib/lib/gpio.i: lib/lib/gpio.cc.i
-
-.PHONY : lib/lib/gpio.i
-
-# target to preprocess a source file
-lib/lib/gpio.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\rgbmatrix.dir\build.make CMakeFiles/rgbmatrix.dir/lib/lib/gpio.cc.i
-.PHONY : lib/lib/gpio.cc.i
-
-lib/lib/gpio.s: lib/lib/gpio.cc.s
-
-.PHONY : lib/lib/gpio.s
-
-# target to generate assembly for a file
-lib/lib/gpio.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\rgbmatrix.dir\build.make CMakeFiles/rgbmatrix.dir/lib/lib/gpio.cc.s
-.PHONY : lib/lib/gpio.cc.s
-
-lib/lib/graphics.obj: lib/lib/graphics.cc.obj
-
-.PHONY : lib/lib/graphics.obj
-
-# target to build an object file
-lib/lib/graphics.cc.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\rgbmatrix.dir\build.make CMakeFiles/rgbmatrix.dir/lib/lib/graphics.cc.obj
-.PHONY : lib/lib/graphics.cc.obj
-
-lib/lib/graphics.i: lib/lib/graphics.cc.i
-
-.PHONY : lib/lib/graphics.i
-
-# target to preprocess a source file
-lib/lib/graphics.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\rgbmatrix.dir\build.make CMakeFiles/rgbmatrix.dir/lib/lib/graphics.cc.i
-.PHONY : lib/lib/graphics.cc.i
-
-lib/lib/graphics.s: lib/lib/graphics.cc.s
-
-.PHONY : lib/lib/graphics.s
-
-# target to generate assembly for a file
-lib/lib/graphics.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\rgbmatrix.dir\build.make CMakeFiles/rgbmatrix.dir/lib/lib/graphics.cc.s
-.PHONY : lib/lib/graphics.cc.s
-
-lib/lib/hardware-mapping.obj: lib/lib/hardware-mapping.c.obj
-
-.PHONY : lib/lib/hardware-mapping.obj
-
-# target to build an object file
-lib/lib/hardware-mapping.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\rgbmatrix.dir\build.make CMakeFiles/rgbmatrix.dir/lib/lib/hardware-mapping.c.obj
-.PHONY : lib/lib/hardware-mapping.c.obj
-
-lib/lib/hardware-mapping.i: lib/lib/hardware-mapping.c.i
-
-.PHONY : lib/lib/hardware-mapping.i
-
-# target to preprocess a source file
-lib/lib/hardware-mapping.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\rgbmatrix.dir\build.make CMakeFiles/rgbmatrix.dir/lib/lib/hardware-mapping.c.i
-.PHONY : lib/lib/hardware-mapping.c.i
-
-lib/lib/hardware-mapping.s: lib/lib/hardware-mapping.c.s
-
-.PHONY : lib/lib/hardware-mapping.s
-
-# target to generate assembly for a file
-lib/lib/hardware-mapping.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\rgbmatrix.dir\build.make CMakeFiles/rgbmatrix.dir/lib/lib/hardware-mapping.c.s
-.PHONY : lib/lib/hardware-mapping.c.s
-
-lib/lib/led-matrix.obj: lib/lib/led-matrix.cc.obj
-
-.PHONY : lib/lib/led-matrix.obj
-
-# target to build an object file
-lib/lib/led-matrix.cc.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\rgbmatrix.dir\build.make CMakeFiles/rgbmatrix.dir/lib/lib/led-matrix.cc.obj
-.PHONY : lib/lib/led-matrix.cc.obj
-
-lib/lib/led-matrix.i: lib/lib/led-matrix.cc.i
-
-.PHONY : lib/lib/led-matrix.i
-
-# target to preprocess a source file
-lib/lib/led-matrix.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\rgbmatrix.dir\build.make CMakeFiles/rgbmatrix.dir/lib/lib/led-matrix.cc.i
-.PHONY : lib/lib/led-matrix.cc.i
-
-lib/lib/led-matrix.s: lib/lib/led-matrix.cc.s
-
-.PHONY : lib/lib/led-matrix.s
-
-# target to generate assembly for a file
-lib/lib/led-matrix.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\rgbmatrix.dir\build.make CMakeFiles/rgbmatrix.dir/lib/lib/led-matrix.cc.s
-.PHONY : lib/lib/led-matrix.cc.s
-
-lib/lib/multiplex-mappers.obj: lib/lib/multiplex-mappers.cc.obj
-
-.PHONY : lib/lib/multiplex-mappers.obj
-
-# target to build an object file
-lib/lib/multiplex-mappers.cc.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\rgbmatrix.dir\build.make CMakeFiles/rgbmatrix.dir/lib/lib/multiplex-mappers.cc.obj
-.PHONY : lib/lib/multiplex-mappers.cc.obj
-
-lib/lib/multiplex-mappers.i: lib/lib/multiplex-mappers.cc.i
-
-.PHONY : lib/lib/multiplex-mappers.i
-
-# target to preprocess a source file
-lib/lib/multiplex-mappers.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\rgbmatrix.dir\build.make CMakeFiles/rgbmatrix.dir/lib/lib/multiplex-mappers.cc.i
-.PHONY : lib/lib/multiplex-mappers.cc.i
-
-lib/lib/multiplex-mappers.s: lib/lib/multiplex-mappers.cc.s
-
-.PHONY : lib/lib/multiplex-mappers.s
-
-# target to generate assembly for a file
-lib/lib/multiplex-mappers.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\rgbmatrix.dir\build.make CMakeFiles/rgbmatrix.dir/lib/lib/multiplex-mappers.cc.s
-.PHONY : lib/lib/multiplex-mappers.cc.s
-
-lib/lib/options-initialize.obj: lib/lib/options-initialize.cc.obj
-
-.PHONY : lib/lib/options-initialize.obj
-
-# target to build an object file
-lib/lib/options-initialize.cc.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\rgbmatrix.dir\build.make CMakeFiles/rgbmatrix.dir/lib/lib/options-initialize.cc.obj
-.PHONY : lib/lib/options-initialize.cc.obj
-
-lib/lib/options-initialize.i: lib/lib/options-initialize.cc.i
-
-.PHONY : lib/lib/options-initialize.i
-
-# target to preprocess a source file
-lib/lib/options-initialize.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\rgbmatrix.dir\build.make CMakeFiles/rgbmatrix.dir/lib/lib/options-initialize.cc.i
-.PHONY : lib/lib/options-initialize.cc.i
-
-lib/lib/options-initialize.s: lib/lib/options-initialize.cc.s
-
-.PHONY : lib/lib/options-initialize.s
-
-# target to generate assembly for a file
-lib/lib/options-initialize.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\rgbmatrix.dir\build.make CMakeFiles/rgbmatrix.dir/lib/lib/options-initialize.cc.s
-.PHONY : lib/lib/options-initialize.cc.s
-
-lib/lib/pixel-mapper.obj: lib/lib/pixel-mapper.cc.obj
-
-.PHONY : lib/lib/pixel-mapper.obj
-
-# target to build an object file
-lib/lib/pixel-mapper.cc.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\rgbmatrix.dir\build.make CMakeFiles/rgbmatrix.dir/lib/lib/pixel-mapper.cc.obj
-.PHONY : lib/lib/pixel-mapper.cc.obj
-
-lib/lib/pixel-mapper.i: lib/lib/pixel-mapper.cc.i
-
-.PHONY : lib/lib/pixel-mapper.i
-
-# target to preprocess a source file
-lib/lib/pixel-mapper.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\rgbmatrix.dir\build.make CMakeFiles/rgbmatrix.dir/lib/lib/pixel-mapper.cc.i
-.PHONY : lib/lib/pixel-mapper.cc.i
-
-lib/lib/pixel-mapper.s: lib/lib/pixel-mapper.cc.s
-
-.PHONY : lib/lib/pixel-mapper.s
-
-# target to generate assembly for a file
-lib/lib/pixel-mapper.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\rgbmatrix.dir\build.make CMakeFiles/rgbmatrix.dir/lib/lib/pixel-mapper.cc.s
-.PHONY : lib/lib/pixel-mapper.cc.s
-
-lib/lib/thread.obj: lib/lib/thread.cc.obj
-
-.PHONY : lib/lib/thread.obj
-
-# target to build an object file
-lib/lib/thread.cc.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\rgbmatrix.dir\build.make CMakeFiles/rgbmatrix.dir/lib/lib/thread.cc.obj
-.PHONY : lib/lib/thread.cc.obj
-
-lib/lib/thread.i: lib/lib/thread.cc.i
-
-.PHONY : lib/lib/thread.i
-
-# target to preprocess a source file
-lib/lib/thread.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\rgbmatrix.dir\build.make CMakeFiles/rgbmatrix.dir/lib/lib/thread.cc.i
-.PHONY : lib/lib/thread.cc.i
-
-lib/lib/thread.s: lib/lib/thread.cc.s
-
-.PHONY : lib/lib/thread.s
-
-# target to generate assembly for a file
-lib/lib/thread.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\rgbmatrix.dir\build.make CMakeFiles/rgbmatrix.dir/lib/lib/thread.cc.s
-.PHONY : lib/lib/thread.cc.s
-
-lib/lib/transformer.obj: lib/lib/transformer.cc.obj
-
-.PHONY : lib/lib/transformer.obj
-
-# target to build an object file
-lib/lib/transformer.cc.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\rgbmatrix.dir\build.make CMakeFiles/rgbmatrix.dir/lib/lib/transformer.cc.obj
-.PHONY : lib/lib/transformer.cc.obj
-
-lib/lib/transformer.i: lib/lib/transformer.cc.i
-
-.PHONY : lib/lib/transformer.i
-
-# target to preprocess a source file
-lib/lib/transformer.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\rgbmatrix.dir\build.make CMakeFiles/rgbmatrix.dir/lib/lib/transformer.cc.i
-.PHONY : lib/lib/transformer.cc.i
-
-lib/lib/transformer.s: lib/lib/transformer.cc.s
-
-.PHONY : lib/lib/transformer.s
-
-# target to generate assembly for a file
-lib/lib/transformer.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\rgbmatrix.dir\build.make CMakeFiles/rgbmatrix.dir/lib/lib/transformer.cc.s
-.PHONY : lib/lib/transformer.cc.s
-
-main.obj: main.cpp.obj
-
-.PHONY : main.obj
-
-# target to build an object file
-main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LED_Board_Program.dir\build.make CMakeFiles/LED_Board_Program.dir/main.cpp.obj
-.PHONY : main.cpp.obj
-
-main.i: main.cpp.i
-
-.PHONY : main.i
-
-# target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LED_Board_Program.dir\build.make CMakeFiles/LED_Board_Program.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LED_Board_Program.dir\build.make CMakeFiles/LED_Board_Program.dir/main.cpp.s
-.PHONY : main.cpp.s
+Test_RandomPixel/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_RandomPixel.dir\build.make CMakeFiles/Test_RandomPixel.dir/build
+.PHONY : Test_RandomPixel/fast
 
 models/Model.obj: models/Model.cpp.obj
 
@@ -552,7 +148,7 @@ models/Model.obj: models/Model.cpp.obj
 
 # target to build an object file
 models/Model.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LED_Board_Program.dir\build.make CMakeFiles/LED_Board_Program.dir/models/Model.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_RandomPixel.dir\build.make CMakeFiles/Test_RandomPixel.dir/models/Model.cpp.obj
 .PHONY : models/Model.cpp.obj
 
 models/Model.i: models/Model.cpp.i
@@ -561,7 +157,7 @@ models/Model.i: models/Model.cpp.i
 
 # target to preprocess a source file
 models/Model.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LED_Board_Program.dir\build.make CMakeFiles/LED_Board_Program.dir/models/Model.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_RandomPixel.dir\build.make CMakeFiles/Test_RandomPixel.dir/models/Model.cpp.i
 .PHONY : models/Model.cpp.i
 
 models/Model.s: models/Model.cpp.s
@@ -570,8 +166,62 @@ models/Model.s: models/Model.cpp.s
 
 # target to generate assembly for a file
 models/Model.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LED_Board_Program.dir\build.make CMakeFiles/LED_Board_Program.dir/models/Model.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_RandomPixel.dir\build.make CMakeFiles/Test_RandomPixel.dir/models/Model.cpp.s
 .PHONY : models/Model.cpp.s
+
+models/animations/Animation.obj: models/animations/Animation.cpp.obj
+
+.PHONY : models/animations/Animation.obj
+
+# target to build an object file
+models/animations/Animation.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_RandomPixel.dir\build.make CMakeFiles/Test_RandomPixel.dir/models/animations/Animation.cpp.obj
+.PHONY : models/animations/Animation.cpp.obj
+
+models/animations/Animation.i: models/animations/Animation.cpp.i
+
+.PHONY : models/animations/Animation.i
+
+# target to preprocess a source file
+models/animations/Animation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_RandomPixel.dir\build.make CMakeFiles/Test_RandomPixel.dir/models/animations/Animation.cpp.i
+.PHONY : models/animations/Animation.cpp.i
+
+models/animations/Animation.s: models/animations/Animation.cpp.s
+
+.PHONY : models/animations/Animation.s
+
+# target to generate assembly for a file
+models/animations/Animation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_RandomPixel.dir\build.make CMakeFiles/Test_RandomPixel.dir/models/animations/Animation.cpp.s
+.PHONY : models/animations/Animation.cpp.s
+
+models/animations/RandomPixels.obj: models/animations/RandomPixels.cpp.obj
+
+.PHONY : models/animations/RandomPixels.obj
+
+# target to build an object file
+models/animations/RandomPixels.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_RandomPixel.dir\build.make CMakeFiles/Test_RandomPixel.dir/models/animations/RandomPixels.cpp.obj
+.PHONY : models/animations/RandomPixels.cpp.obj
+
+models/animations/RandomPixels.i: models/animations/RandomPixels.cpp.i
+
+.PHONY : models/animations/RandomPixels.i
+
+# target to preprocess a source file
+models/animations/RandomPixels.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_RandomPixel.dir\build.make CMakeFiles/Test_RandomPixel.dir/models/animations/RandomPixels.cpp.i
+.PHONY : models/animations/RandomPixels.cpp.i
+
+models/animations/RandomPixels.s: models/animations/RandomPixels.cpp.s
+
+.PHONY : models/animations/RandomPixels.s
+
+# target to generate assembly for a file
+models/animations/RandomPixels.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_RandomPixel.dir\build.make CMakeFiles/Test_RandomPixel.dir/models/animations/RandomPixels.cpp.s
+.PHONY : models/animations/RandomPixels.cpp.s
 
 services/DataState.obj: services/DataState.cpp.obj
 
@@ -579,8 +229,7 @@ services/DataState.obj: services/DataState.cpp.obj
 
 # target to build an object file
 services/DataState.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_DataState.dir\build.make CMakeFiles/Test_DataState.dir/services/DataState.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LED_Board_Program.dir\build.make CMakeFiles/LED_Board_Program.dir/services/DataState.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_RandomPixel.dir\build.make CMakeFiles/Test_RandomPixel.dir/services/DataState.cpp.obj
 .PHONY : services/DataState.cpp.obj
 
 services/DataState.i: services/DataState.cpp.i
@@ -589,8 +238,7 @@ services/DataState.i: services/DataState.cpp.i
 
 # target to preprocess a source file
 services/DataState.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_DataState.dir\build.make CMakeFiles/Test_DataState.dir/services/DataState.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LED_Board_Program.dir\build.make CMakeFiles/LED_Board_Program.dir/services/DataState.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_RandomPixel.dir\build.make CMakeFiles/Test_RandomPixel.dir/services/DataState.cpp.i
 .PHONY : services/DataState.cpp.i
 
 services/DataState.s: services/DataState.cpp.s
@@ -599,93 +247,35 @@ services/DataState.s: services/DataState.cpp.s
 
 # target to generate assembly for a file
 services/DataState.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_DataState.dir\build.make CMakeFiles/Test_DataState.dir/services/DataState.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LED_Board_Program.dir\build.make CMakeFiles/LED_Board_Program.dir/services/DataState.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_RandomPixel.dir\build.make CMakeFiles/Test_RandomPixel.dir/services/DataState.cpp.s
 .PHONY : services/DataState.cpp.s
 
-tests/DataStateTests.obj: tests/DataStateTests.cpp.obj
+tests/RandomPixelAnimTest.obj: tests/RandomPixelAnimTest.cpp.obj
 
-.PHONY : tests/DataStateTests.obj
-
-# target to build an object file
-tests/DataStateTests.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_DataState.dir\build.make CMakeFiles/Test_DataState.dir/tests/DataStateTests.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LED_Board_Program.dir\build.make CMakeFiles/LED_Board_Program.dir/tests/DataStateTests.cpp.obj
-.PHONY : tests/DataStateTests.cpp.obj
-
-tests/DataStateTests.i: tests/DataStateTests.cpp.i
-
-.PHONY : tests/DataStateTests.i
-
-# target to preprocess a source file
-tests/DataStateTests.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_DataState.dir\build.make CMakeFiles/Test_DataState.dir/tests/DataStateTests.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LED_Board_Program.dir\build.make CMakeFiles/LED_Board_Program.dir/tests/DataStateTests.cpp.i
-.PHONY : tests/DataStateTests.cpp.i
-
-tests/DataStateTests.s: tests/DataStateTests.cpp.s
-
-.PHONY : tests/DataStateTests.s
-
-# target to generate assembly for a file
-tests/DataStateTests.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_DataState.dir\build.make CMakeFiles/Test_DataState.dir/tests/DataStateTests.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LED_Board_Program.dir\build.make CMakeFiles/LED_Board_Program.dir/tests/DataStateTests.cpp.s
-.PHONY : tests/DataStateTests.cpp.s
-
-views/LEDDisplay.obj: views/LEDDisplay.cpp.obj
-
-.PHONY : views/LEDDisplay.obj
+.PHONY : tests/RandomPixelAnimTest.obj
 
 # target to build an object file
-views/LEDDisplay.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LED_Board_Program.dir\build.make CMakeFiles/LED_Board_Program.dir/views/LEDDisplay.cpp.obj
-.PHONY : views/LEDDisplay.cpp.obj
+tests/RandomPixelAnimTest.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_RandomPixel.dir\build.make CMakeFiles/Test_RandomPixel.dir/tests/RandomPixelAnimTest.cpp.obj
+.PHONY : tests/RandomPixelAnimTest.cpp.obj
 
-views/LEDDisplay.i: views/LEDDisplay.cpp.i
+tests/RandomPixelAnimTest.i: tests/RandomPixelAnimTest.cpp.i
 
-.PHONY : views/LEDDisplay.i
-
-# target to preprocess a source file
-views/LEDDisplay.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LED_Board_Program.dir\build.make CMakeFiles/LED_Board_Program.dir/views/LEDDisplay.cpp.i
-.PHONY : views/LEDDisplay.cpp.i
-
-views/LEDDisplay.s: views/LEDDisplay.cpp.s
-
-.PHONY : views/LEDDisplay.s
-
-# target to generate assembly for a file
-views/LEDDisplay.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LED_Board_Program.dir\build.make CMakeFiles/LED_Board_Program.dir/views/LEDDisplay.cpp.s
-.PHONY : views/LEDDisplay.cpp.s
-
-views/View.obj: views/View.cpp.obj
-
-.PHONY : views/View.obj
-
-# target to build an object file
-views/View.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LED_Board_Program.dir\build.make CMakeFiles/LED_Board_Program.dir/views/View.cpp.obj
-.PHONY : views/View.cpp.obj
-
-views/View.i: views/View.cpp.i
-
-.PHONY : views/View.i
+.PHONY : tests/RandomPixelAnimTest.i
 
 # target to preprocess a source file
-views/View.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LED_Board_Program.dir\build.make CMakeFiles/LED_Board_Program.dir/views/View.cpp.i
-.PHONY : views/View.cpp.i
+tests/RandomPixelAnimTest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_RandomPixel.dir\build.make CMakeFiles/Test_RandomPixel.dir/tests/RandomPixelAnimTest.cpp.i
+.PHONY : tests/RandomPixelAnimTest.cpp.i
 
-views/View.s: views/View.cpp.s
+tests/RandomPixelAnimTest.s: tests/RandomPixelAnimTest.cpp.s
 
-.PHONY : views/View.s
+.PHONY : tests/RandomPixelAnimTest.s
 
 # target to generate assembly for a file
-views/View.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LED_Board_Program.dir\build.make CMakeFiles/LED_Board_Program.dir/views/View.cpp.s
-.PHONY : views/View.cpp.s
+tests/RandomPixelAnimTest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_RandomPixel.dir\build.make CMakeFiles/Test_RandomPixel.dir/tests/RandomPixelAnimTest.cpp.s
+.PHONY : tests/RandomPixelAnimTest.cpp.s
 
 # Help Target
 help:
@@ -695,66 +285,22 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... LED_Board_Program
-	@echo ... Test_DataState
-	@echo ... rgbmatrix
-	@echo ... controllers/LEDBoardEngine.obj
-	@echo ... controllers/LEDBoardEngine.i
-	@echo ... controllers/LEDBoardEngine.s
-	@echo ... lib/lib/bdf-font.obj
-	@echo ... lib/lib/bdf-font.i
-	@echo ... lib/lib/bdf-font.s
-	@echo ... lib/lib/content-streamer.obj
-	@echo ... lib/lib/content-streamer.i
-	@echo ... lib/lib/content-streamer.s
-	@echo ... lib/lib/framebuffer.obj
-	@echo ... lib/lib/framebuffer.i
-	@echo ... lib/lib/framebuffer.s
-	@echo ... lib/lib/gpio.obj
-	@echo ... lib/lib/gpio.i
-	@echo ... lib/lib/gpio.s
-	@echo ... lib/lib/graphics.obj
-	@echo ... lib/lib/graphics.i
-	@echo ... lib/lib/graphics.s
-	@echo ... lib/lib/hardware-mapping.obj
-	@echo ... lib/lib/hardware-mapping.i
-	@echo ... lib/lib/hardware-mapping.s
-	@echo ... lib/lib/led-matrix.obj
-	@echo ... lib/lib/led-matrix.i
-	@echo ... lib/lib/led-matrix.s
-	@echo ... lib/lib/multiplex-mappers.obj
-	@echo ... lib/lib/multiplex-mappers.i
-	@echo ... lib/lib/multiplex-mappers.s
-	@echo ... lib/lib/options-initialize.obj
-	@echo ... lib/lib/options-initialize.i
-	@echo ... lib/lib/options-initialize.s
-	@echo ... lib/lib/pixel-mapper.obj
-	@echo ... lib/lib/pixel-mapper.i
-	@echo ... lib/lib/pixel-mapper.s
-	@echo ... lib/lib/thread.obj
-	@echo ... lib/lib/thread.i
-	@echo ... lib/lib/thread.s
-	@echo ... lib/lib/transformer.obj
-	@echo ... lib/lib/transformer.i
-	@echo ... lib/lib/transformer.s
-	@echo ... main.obj
-	@echo ... main.i
-	@echo ... main.s
+	@echo ... Test_RandomPixel
 	@echo ... models/Model.obj
 	@echo ... models/Model.i
 	@echo ... models/Model.s
+	@echo ... models/animations/Animation.obj
+	@echo ... models/animations/Animation.i
+	@echo ... models/animations/Animation.s
+	@echo ... models/animations/RandomPixels.obj
+	@echo ... models/animations/RandomPixels.i
+	@echo ... models/animations/RandomPixels.s
 	@echo ... services/DataState.obj
 	@echo ... services/DataState.i
 	@echo ... services/DataState.s
-	@echo ... tests/DataStateTests.obj
-	@echo ... tests/DataStateTests.i
-	@echo ... tests/DataStateTests.s
-	@echo ... views/LEDDisplay.obj
-	@echo ... views/LEDDisplay.i
-	@echo ... views/LEDDisplay.s
-	@echo ... views/View.obj
-	@echo ... views/View.i
-	@echo ... views/View.s
+	@echo ... tests/RandomPixelAnimTest.obj
+	@echo ... tests/RandomPixelAnimTest.i
+	@echo ... tests/RandomPixelAnimTest.s
 .PHONY : help
 
 

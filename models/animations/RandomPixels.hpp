@@ -1,0 +1,22 @@
+//
+// Created by theom on 9/26/2020.
+//
+
+#ifndef LED_BOARD_PROGRAM_RANDOMPIXELS_HPP
+#define LED_BOARD_PROGRAM_RANDOMPIXELS_HPP
+
+#include "Animation.hpp"
+
+namespace LEDBoard {
+    class RandomPixels : public Animation {
+    private:
+        void generateColor(int &curColor);
+    public:
+        RandomPixels(DataState *state);
+        void processStep();
+
+    };
+}
+
+
+#endif //LED_BOARD_PROGRAM_RANDOMPIXELS_HPP

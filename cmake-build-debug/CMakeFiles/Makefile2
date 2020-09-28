@@ -72,9 +72,7 @@ CMAKE_BINARY_DIR = D:\CLionProjects\LED-Board-Program\cmake-build-debug
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/Test_DataState.dir/all
-all: CMakeFiles/LED_Board_Program.dir/all
-all: CMakeFiles/rgbmatrix.dir/all
+all: CMakeFiles/Test_RandomPixel.dir/all
 
 .PHONY : all
 
@@ -84,92 +82,36 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/Test_DataState.dir/clean
-clean: CMakeFiles/LED_Board_Program.dir/clean
-clean: CMakeFiles/rgbmatrix.dir/clean
+clean: CMakeFiles/Test_RandomPixel.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/Test_DataState.dir
+# Target rules for target CMakeFiles/Test_RandomPixel.dir
 
 # All Build rule for target.
-CMakeFiles/Test_DataState.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_DataState.dir\build.make CMakeFiles/Test_DataState.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_DataState.dir\build.make CMakeFiles/Test_DataState.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\CLionProjects\LED-Board-Program\cmake-build-debug\CMakeFiles --progress-num=9,10,11 "Built target Test_DataState"
-.PHONY : CMakeFiles/Test_DataState.dir/all
+CMakeFiles/Test_RandomPixel.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_RandomPixel.dir\build.make CMakeFiles/Test_RandomPixel.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_RandomPixel.dir\build.make CMakeFiles/Test_RandomPixel.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\CLionProjects\LED-Board-Program\cmake-build-debug\CMakeFiles --progress-num=1,2,3,4,5,6 "Built target Test_RandomPixel"
+.PHONY : CMakeFiles/Test_RandomPixel.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/Test_DataState.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\CLionProjects\LED-Board-Program\cmake-build-debug\CMakeFiles 3
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/Test_DataState.dir/all
+CMakeFiles/Test_RandomPixel.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\CLionProjects\LED-Board-Program\cmake-build-debug\CMakeFiles 6
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/Test_RandomPixel.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start D:\CLionProjects\LED-Board-Program\cmake-build-debug\CMakeFiles 0
-.PHONY : CMakeFiles/Test_DataState.dir/rule
+.PHONY : CMakeFiles/Test_RandomPixel.dir/rule
 
 # Convenience name for target.
-Test_DataState: CMakeFiles/Test_DataState.dir/rule
+Test_RandomPixel: CMakeFiles/Test_RandomPixel.dir/rule
 
-.PHONY : Test_DataState
-
-# clean rule for target.
-CMakeFiles/Test_DataState.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_DataState.dir\build.make CMakeFiles/Test_DataState.dir/clean
-.PHONY : CMakeFiles/Test_DataState.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/LED_Board_Program.dir
-
-# All Build rule for target.
-CMakeFiles/LED_Board_Program.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LED_Board_Program.dir\build.make CMakeFiles/LED_Board_Program.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LED_Board_Program.dir\build.make CMakeFiles/LED_Board_Program.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\CLionProjects\LED-Board-Program\cmake-build-debug\CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Built target LED_Board_Program"
-.PHONY : CMakeFiles/LED_Board_Program.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/LED_Board_Program.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\CLionProjects\LED-Board-Program\cmake-build-debug\CMakeFiles 8
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/LED_Board_Program.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\CLionProjects\LED-Board-Program\cmake-build-debug\CMakeFiles 0
-.PHONY : CMakeFiles/LED_Board_Program.dir/rule
-
-# Convenience name for target.
-LED_Board_Program: CMakeFiles/LED_Board_Program.dir/rule
-
-.PHONY : LED_Board_Program
+.PHONY : Test_RandomPixel
 
 # clean rule for target.
-CMakeFiles/LED_Board_Program.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LED_Board_Program.dir\build.make CMakeFiles/LED_Board_Program.dir/clean
-.PHONY : CMakeFiles/LED_Board_Program.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/rgbmatrix.dir
-
-# All Build rule for target.
-CMakeFiles/rgbmatrix.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\rgbmatrix.dir\build.make CMakeFiles/rgbmatrix.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\rgbmatrix.dir\build.make CMakeFiles/rgbmatrix.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\CLionProjects\LED-Board-Program\cmake-build-debug\CMakeFiles --progress-num=12,13,14,15,16,17,18,19,20,21,22,23,24 "Built target rgbmatrix"
-.PHONY : CMakeFiles/rgbmatrix.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/rgbmatrix.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\CLionProjects\LED-Board-Program\cmake-build-debug\CMakeFiles 13
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/rgbmatrix.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\CLionProjects\LED-Board-Program\cmake-build-debug\CMakeFiles 0
-.PHONY : CMakeFiles/rgbmatrix.dir/rule
-
-# Convenience name for target.
-rgbmatrix: CMakeFiles/rgbmatrix.dir/rule
-
-.PHONY : rgbmatrix
-
-# clean rule for target.
-CMakeFiles/rgbmatrix.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\rgbmatrix.dir\build.make CMakeFiles/rgbmatrix.dir/clean
-.PHONY : CMakeFiles/rgbmatrix.dir/clean
+CMakeFiles/Test_RandomPixel.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_RandomPixel.dir\build.make CMakeFiles/Test_RandomPixel.dir/clean
+.PHONY : CMakeFiles/Test_RandomPixel.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

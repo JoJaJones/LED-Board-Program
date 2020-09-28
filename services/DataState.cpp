@@ -7,6 +7,8 @@
 
 #include <iostream>
 
+LEDBoard::DataState::DataState() : DataState(0) {}
+
 LEDBoard::DataState::DataState(int defaultColor) {
     numPanels = BOARD_CHAIN_LEN;
     numPanelCols = NUM_COLS_OF_PANELS;
@@ -54,13 +56,12 @@ void LEDBoard::DataState::convertPos(int *pos) {
         row = col = -1;
     }
 
-    int boardRow, boardCol;
+    int boardRow;
     if(row < LED_ROWS_PER_BOARD){
         boardRow = 0;
-        boardCol = boardNum = col / LED_COLS_PER_BOARD;
+        boardNum = col / LED_COLS_PER_BOARD;
     } else {
         boardRow = row / LED_ROWS_PER_BOARD;
-        boardCol = col / LED_COLS_PER_BOARD;
         boardNum = boardRow * numPanelCols;
         if(boardRow % 2 != 0) {
             int totalColsPerRow = numPanelCols * LED_COLS_PER_BOARD;
@@ -123,7 +124,6 @@ void LEDBoard::DataState::setArea(int *pos0, int *pos1, vector<vector<int>> &dat
 }
 
 void LEDBoard::DataState::calcLocalPos(int *pos, int boardNum) {
-    bool isIn2ndOr4th = (pos[R_IDX] >= midRow) ^ (pos[C_IDX] >= midCol);
     int row, col;
     switch(panelOrientations[boardNum]){
         case CLOCKWISE:
@@ -150,6 +150,11 @@ std::vector<std::vector<int>> *LEDBoard::DataState::getBoard() {
     return &board;
 }
 
-
-
-
+void LEDBoard::DataState::printBoard() {
+    for (auto & i : board) {
+        for (int j : i) {
+            std::cout<<j<<" ";
+        }
+        std::cout<<std::endl;
+    }
+}

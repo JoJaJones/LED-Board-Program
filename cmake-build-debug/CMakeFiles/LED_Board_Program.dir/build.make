@@ -174,6 +174,90 @@ CMakeFiles/LED_Board_Program.dir/tests/DataStateTests.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LED_Board_Program.dir/tests/DataStateTests.cpp.s"
 	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\CLionProjects\LED-Board-Program\tests\DataStateTests.cpp -o CMakeFiles\LED_Board_Program.dir\tests\DataStateTests.cpp.s
 
+CMakeFiles/LED_Board_Program.dir/models/animations/Animation.cpp.obj: CMakeFiles/LED_Board_Program.dir/flags.make
+CMakeFiles/LED_Board_Program.dir/models/animations/Animation.cpp.obj: CMakeFiles/LED_Board_Program.dir/includes_CXX.rsp
+CMakeFiles/LED_Board_Program.dir/models/animations/Animation.cpp.obj: ../models/animations/Animation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\CLionProjects\LED-Board-Program\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/LED_Board_Program.dir/models/animations/Animation.cpp.obj"
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\LED_Board_Program.dir\models\animations\Animation.cpp.obj -c D:\CLionProjects\LED-Board-Program\models\animations\Animation.cpp
+
+CMakeFiles/LED_Board_Program.dir/models/animations/Animation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LED_Board_Program.dir/models/animations/Animation.cpp.i"
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\CLionProjects\LED-Board-Program\models\animations\Animation.cpp > CMakeFiles\LED_Board_Program.dir\models\animations\Animation.cpp.i
+
+CMakeFiles/LED_Board_Program.dir/models/animations/Animation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LED_Board_Program.dir/models/animations/Animation.cpp.s"
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\CLionProjects\LED-Board-Program\models\animations\Animation.cpp -o CMakeFiles\LED_Board_Program.dir\models\animations\Animation.cpp.s
+
+CMakeFiles/LED_Board_Program.dir/models/games/Game.cpp.obj: CMakeFiles/LED_Board_Program.dir/flags.make
+CMakeFiles/LED_Board_Program.dir/models/games/Game.cpp.obj: CMakeFiles/LED_Board_Program.dir/includes_CXX.rsp
+CMakeFiles/LED_Board_Program.dir/models/games/Game.cpp.obj: ../models/games/Game.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\CLionProjects\LED-Board-Program\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/LED_Board_Program.dir/models/games/Game.cpp.obj"
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\LED_Board_Program.dir\models\games\Game.cpp.obj -c D:\CLionProjects\LED-Board-Program\models\games\Game.cpp
+
+CMakeFiles/LED_Board_Program.dir/models/games/Game.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LED_Board_Program.dir/models/games/Game.cpp.i"
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\CLionProjects\LED-Board-Program\models\games\Game.cpp > CMakeFiles\LED_Board_Program.dir\models\games\Game.cpp.i
+
+CMakeFiles/LED_Board_Program.dir/models/games/Game.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LED_Board_Program.dir/models/games/Game.cpp.s"
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\CLionProjects\LED-Board-Program\models\games\Game.cpp -o CMakeFiles\LED_Board_Program.dir\models\games\Game.cpp.s
+
+CMakeFiles/LED_Board_Program.dir/models/Position.cpp.obj: CMakeFiles/LED_Board_Program.dir/flags.make
+CMakeFiles/LED_Board_Program.dir/models/Position.cpp.obj: CMakeFiles/LED_Board_Program.dir/includes_CXX.rsp
+CMakeFiles/LED_Board_Program.dir/models/Position.cpp.obj: ../models/Position.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\CLionProjects\LED-Board-Program\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/LED_Board_Program.dir/models/Position.cpp.obj"
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\LED_Board_Program.dir\models\Position.cpp.obj -c D:\CLionProjects\LED-Board-Program\models\Position.cpp
+
+CMakeFiles/LED_Board_Program.dir/models/Position.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LED_Board_Program.dir/models/Position.cpp.i"
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\CLionProjects\LED-Board-Program\models\Position.cpp > CMakeFiles\LED_Board_Program.dir\models\Position.cpp.i
+
+CMakeFiles/LED_Board_Program.dir/models/Position.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LED_Board_Program.dir/models/Position.cpp.s"
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\CLionProjects\LED-Board-Program\models\Position.cpp -o CMakeFiles\LED_Board_Program.dir\models\Position.cpp.s
+
+CMakeFiles/LED_Board_Program.dir/models/simulations/Simulation.cpp.obj: CMakeFiles/LED_Board_Program.dir/flags.make
+CMakeFiles/LED_Board_Program.dir/models/simulations/Simulation.cpp.obj: CMakeFiles/LED_Board_Program.dir/includes_CXX.rsp
+CMakeFiles/LED_Board_Program.dir/models/simulations/Simulation.cpp.obj: ../models/simulations/Simulation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\CLionProjects\LED-Board-Program\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/LED_Board_Program.dir/models/simulations/Simulation.cpp.obj"
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\LED_Board_Program.dir\models\simulations\Simulation.cpp.obj -c D:\CLionProjects\LED-Board-Program\models\simulations\Simulation.cpp
+
+CMakeFiles/LED_Board_Program.dir/models/simulations/Simulation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LED_Board_Program.dir/models/simulations/Simulation.cpp.i"
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\CLionProjects\LED-Board-Program\models\simulations\Simulation.cpp > CMakeFiles\LED_Board_Program.dir\models\simulations\Simulation.cpp.i
+
+CMakeFiles/LED_Board_Program.dir/models/simulations/Simulation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LED_Board_Program.dir/models/simulations/Simulation.cpp.s"
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\CLionProjects\LED-Board-Program\models\simulations\Simulation.cpp -o CMakeFiles\LED_Board_Program.dir\models\simulations\Simulation.cpp.s
+
+CMakeFiles/LED_Board_Program.dir/models/animations/RandomPixels.cpp.obj: CMakeFiles/LED_Board_Program.dir/flags.make
+CMakeFiles/LED_Board_Program.dir/models/animations/RandomPixels.cpp.obj: CMakeFiles/LED_Board_Program.dir/includes_CXX.rsp
+CMakeFiles/LED_Board_Program.dir/models/animations/RandomPixels.cpp.obj: ../models/animations/RandomPixels.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\CLionProjects\LED-Board-Program\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/LED_Board_Program.dir/models/animations/RandomPixels.cpp.obj"
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\LED_Board_Program.dir\models\animations\RandomPixels.cpp.obj -c D:\CLionProjects\LED-Board-Program\models\animations\RandomPixels.cpp
+
+CMakeFiles/LED_Board_Program.dir/models/animations/RandomPixels.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LED_Board_Program.dir/models/animations/RandomPixels.cpp.i"
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\CLionProjects\LED-Board-Program\models\animations\RandomPixels.cpp > CMakeFiles\LED_Board_Program.dir\models\animations\RandomPixels.cpp.i
+
+CMakeFiles/LED_Board_Program.dir/models/animations/RandomPixels.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LED_Board_Program.dir/models/animations/RandomPixels.cpp.s"
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\CLionProjects\LED-Board-Program\models\animations\RandomPixels.cpp -o CMakeFiles\LED_Board_Program.dir\models\animations\RandomPixels.cpp.s
+
+CMakeFiles/LED_Board_Program.dir/tests/RandomPixelAnimTest.cpp.obj: CMakeFiles/LED_Board_Program.dir/flags.make
+CMakeFiles/LED_Board_Program.dir/tests/RandomPixelAnimTest.cpp.obj: CMakeFiles/LED_Board_Program.dir/includes_CXX.rsp
+CMakeFiles/LED_Board_Program.dir/tests/RandomPixelAnimTest.cpp.obj: ../tests/RandomPixelAnimTest.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\CLionProjects\LED-Board-Program\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/LED_Board_Program.dir/tests/RandomPixelAnimTest.cpp.obj"
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\LED_Board_Program.dir\tests\RandomPixelAnimTest.cpp.obj -c D:\CLionProjects\LED-Board-Program\tests\RandomPixelAnimTest.cpp
+
+CMakeFiles/LED_Board_Program.dir/tests/RandomPixelAnimTest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LED_Board_Program.dir/tests/RandomPixelAnimTest.cpp.i"
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\CLionProjects\LED-Board-Program\tests\RandomPixelAnimTest.cpp > CMakeFiles\LED_Board_Program.dir\tests\RandomPixelAnimTest.cpp.i
+
+CMakeFiles/LED_Board_Program.dir/tests/RandomPixelAnimTest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LED_Board_Program.dir/tests/RandomPixelAnimTest.cpp.s"
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\CLionProjects\LED-Board-Program\tests\RandomPixelAnimTest.cpp -o CMakeFiles\LED_Board_Program.dir\tests\RandomPixelAnimTest.cpp.s
+
 # Object files for target LED_Board_Program
 LED_Board_Program_OBJECTS = \
 "CMakeFiles/LED_Board_Program.dir/main.cpp.obj" \
@@ -182,7 +266,13 @@ LED_Board_Program_OBJECTS = \
 "CMakeFiles/LED_Board_Program.dir/services/DataState.cpp.obj" \
 "CMakeFiles/LED_Board_Program.dir/controllers/LEDBoardEngine.cpp.obj" \
 "CMakeFiles/LED_Board_Program.dir/views/View.cpp.obj" \
-"CMakeFiles/LED_Board_Program.dir/tests/DataStateTests.cpp.obj"
+"CMakeFiles/LED_Board_Program.dir/tests/DataStateTests.cpp.obj" \
+"CMakeFiles/LED_Board_Program.dir/models/animations/Animation.cpp.obj" \
+"CMakeFiles/LED_Board_Program.dir/models/games/Game.cpp.obj" \
+"CMakeFiles/LED_Board_Program.dir/models/Position.cpp.obj" \
+"CMakeFiles/LED_Board_Program.dir/models/simulations/Simulation.cpp.obj" \
+"CMakeFiles/LED_Board_Program.dir/models/animations/RandomPixels.cpp.obj" \
+"CMakeFiles/LED_Board_Program.dir/tests/RandomPixelAnimTest.cpp.obj"
 
 # External object files for target LED_Board_Program
 LED_Board_Program_EXTERNAL_OBJECTS =
@@ -194,11 +284,17 @@ LED_Board_Program.exe: CMakeFiles/LED_Board_Program.dir/services/DataState.cpp.o
 LED_Board_Program.exe: CMakeFiles/LED_Board_Program.dir/controllers/LEDBoardEngine.cpp.obj
 LED_Board_Program.exe: CMakeFiles/LED_Board_Program.dir/views/View.cpp.obj
 LED_Board_Program.exe: CMakeFiles/LED_Board_Program.dir/tests/DataStateTests.cpp.obj
+LED_Board_Program.exe: CMakeFiles/LED_Board_Program.dir/models/animations/Animation.cpp.obj
+LED_Board_Program.exe: CMakeFiles/LED_Board_Program.dir/models/games/Game.cpp.obj
+LED_Board_Program.exe: CMakeFiles/LED_Board_Program.dir/models/Position.cpp.obj
+LED_Board_Program.exe: CMakeFiles/LED_Board_Program.dir/models/simulations/Simulation.cpp.obj
+LED_Board_Program.exe: CMakeFiles/LED_Board_Program.dir/models/animations/RandomPixels.cpp.obj
+LED_Board_Program.exe: CMakeFiles/LED_Board_Program.dir/tests/RandomPixelAnimTest.cpp.obj
 LED_Board_Program.exe: CMakeFiles/LED_Board_Program.dir/build.make
 LED_Board_Program.exe: CMakeFiles/LED_Board_Program.dir/linklibs.rsp
 LED_Board_Program.exe: CMakeFiles/LED_Board_Program.dir/objects1.rsp
 LED_Board_Program.exe: CMakeFiles/LED_Board_Program.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\CLionProjects\LED-Board-Program\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable LED_Board_Program.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\CLionProjects\LED-Board-Program\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable LED_Board_Program.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\LED_Board_Program.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -5,9 +5,21 @@
 #ifndef LED_BOARD_PROGRAM_MODEL_HPP
 #define LED_BOARD_PROGRAM_MODEL_HPP
 
-namespace LEDBoard {
-    class Model {
+#include <DataState.hpp>
 
+namespace LEDBoard {
+    template <class T>
+    class Model {
+    protected:
+        DataState *viewBoard{};
+        vector<vector<T>> board;
+
+        virtual void processStep() = 0;
+        virtual void updateBoard();
+    public:
+        explicit Model(DataState *state);
+        virtual ~Model();
+        void processFrame();
     };
 }
 

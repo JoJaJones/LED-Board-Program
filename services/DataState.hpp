@@ -7,6 +7,7 @@
 
 #include <vector>
 #include <board_constants.hpp>
+#include <iostream>
 
 namespace LEDBoard {
     using std::vector;
@@ -21,6 +22,7 @@ namespace LEDBoard {
 
 
     public:
+        DataState();
         explicit DataState(int defaultColor);
         DataState(int defaultColor, int numPanels, int numPanelRows, int numPanelCols,
                   vector <Rotations> panelConfigs);
@@ -30,6 +32,7 @@ namespace LEDBoard {
         void convertPos(int* pos);
         void calcLocalPos(int* pos, int boardNum);
         vector<vector<int>>* getBoard();
+        void printBoard();
     };
 }
 
