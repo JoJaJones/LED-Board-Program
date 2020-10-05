@@ -23,11 +23,11 @@ LEDBoard::DataState::DataState(int defaultColor) {
     }
 }
 
-LEDBoard::DataState::DataState(int defaultColor, int numPanels, int numPanelRows, int numPanelCols,
-                               vector <Rotations> panelConfigs) {
+LEDBoard::DataState::DataState(int defaultColor, int numPanels, int numRows, int numCols,
+                               vector <Rotations> &panelConfigs) {
     this->numPanels = numPanels;
-    this->numPanelRows = numPanelRows;
-    this->numPanelCols = numPanelCols;
+    this->numPanelRows = numRows;
+    this->numPanelCols = numCols;
     this->defaultColor = defaultColor;
 
     initBoard();
@@ -98,6 +98,7 @@ void LEDBoard::DataState::setPixel(int *pos, int colorValue, bool isRawPos) {
     }
     int r = pos[R_IDX], c = pos[C_IDX];
     board[r][c] = colorValue;
+    updatedPos.emplace(r, c);
 }
 
 void LEDBoard::DataState::setPixel(vector<int *> coords, vector<int> colorValues, bool isRawPos) {
@@ -109,6 +110,7 @@ void LEDBoard::DataState::setPixel(vector<int *> coords, vector<int> colorValues
         r = coords[i][R_IDX];
         c = coords[i][C_IDX];
         board[r][c] = colorValues[i];
+        updatedPos.emplace(r, c);
     }
 }
 
@@ -131,6 +133,7 @@ void LEDBoard::DataState::setArea(int *pos0, int *pos1, vector<vector<int>> &dat
             tempPos[C_IDX] = j + pos0[C_IDX];
             convertPos(tempPos);
             board[tempPos[R_IDX]][tempPos[C_IDX]] = data[i][j];
+            updatedPos.emplace(tempPos[R_IDX], tempPos[C_IDX]);
         }
     }
 }
@@ -173,9 +176,7 @@ void LEDBoard::DataState::printBoard() {
     std::cout<<std::endl;
 }
 
-LEDBoard::DataState::~DataState() {
-
-}
+LEDBoard::DataState::~DataState() = default;
 
 LEDBoard::DataState *LEDBoard::DataState::getInstance() {
     if(state == nullptr) {
@@ -246,6 +247,14 @@ void LEDBoard::DataState::updateDisplaySettings(int color, int numPanel, int num
     }
 
     initBoard();
+}
+
+std::set<std::pair<int, int>> *LEDBoard::DataState::getUpdatedPos() {
+    return &updatedPos;
+}
+
+void LEDBoard::DataState::clearUpdated() {
+    updatedPos.clear();
 }
 
 

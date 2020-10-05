@@ -8,6 +8,7 @@
 #include <vector>
 #include <board_constants.hpp>
 #include <iostream>
+#include <set>
 
 namespace LEDBoard {
     using std::vector;
@@ -15,13 +16,13 @@ namespace LEDBoard {
     private:
         static DataState *state;
         vector<vector<int>> board;
-        vector<int*> updatedPos;
+        std::set<std::pair<int, int>> updatedPos;
         vector<Rotations> panelOrientations;
         int numPanels, numPanelRows, numPanelCols;
         int defaultColor;
         static int numReferences;
         explicit DataState(int defaultColor);
-        DataState(int defaultColor, int numPanels, int numRows, int numCols, vector<Rotations> panelConfigs);
+        DataState(int defaultColor, int numPanels, int numRows, int numCols, vector <Rotations> &panelConfigs);
         ~DataState();
         void initBoard();
     public:
@@ -34,7 +35,7 @@ namespace LEDBoard {
         void setPanelCols(int numCols);
         void setPanelOrientations(vector <Rotations> &orientations);
         void updateDisplaySettings(int color, int numPanel, int numRow, int numCol, vector <Rotations> &orientations);
-        void releaseReference();
+        static void releaseReference();
         void setPixel(int *pos, int colorValue, bool isRawPos = true);
         void setPixel(vector<int *> coords, vector<int> colorValues, bool isRawPos = true);
         void setArea(int* pos0, int* pos1, vector<vector<int>> &data);
@@ -42,6 +43,8 @@ namespace LEDBoard {
         void calcLocalPos(int* pos, int boardNum);
         vector<vector<int>>* getBoard();
         void printBoard();
+        std::set<std::pair<int, int>>* getUpdatedPos();
+        void clearUpdated();
     };
 
 
