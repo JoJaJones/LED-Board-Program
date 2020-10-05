@@ -5,13 +5,13 @@
 #include "Simulation.hpp"
 namespace LEDBoard {
     template<class T>
-    Simulation<T>::Simulation(LEDBoard::DataState *state) : Model<LEDBoard::Position<T>>(state) {
+    Simulation<T>::Simulation() : Model<LEDBoard::Position<T>>() {
         maxStepNum = stepNum = 0;
         runForever = true;
     }
 
     template<class T>
-    Simulation<T>::Simulation(LEDBoard::DataState *state, int maxStep) : Model<Position<T>>(state) {
+    Simulation<T>::Simulation(int maxStep) : Model<Position<T>>() {
         stepNum = 0;
         maxStepNum = maxStep;
         runForever = false;

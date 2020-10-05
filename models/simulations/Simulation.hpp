@@ -16,8 +16,8 @@ namespace LEDBoard {
         bool runForever;
 
     public:
-        Simulation(int maxStep);
-        explicit Simulation(DataState* state);
+        explicit Simulation(int maxStep);
+        Simulation();
         void initBoard();
     };
 }
