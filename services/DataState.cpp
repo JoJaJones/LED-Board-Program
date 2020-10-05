@@ -14,10 +14,9 @@ LEDBoard::DataState::DataState(int defaultColor) {
     numPanels = BOARD_CHAIN_LEN;
     numPanelCols = NUM_COLS_OF_PANELS;
     numPanelRows = NUM_ROWS_OF_PANELS;
-    midCol = LED_COLS_PER_BOARD/2;
-    midRow = LED_ROWS_PER_BOARD/2;
+    this->defaultColor = defaultColor;
 
-    initBoard(defaultColor);
+    initBoard();
 
     for (auto i : PANEL_CONFIGURATION) {
         panelOrientations.push_back(i);
@@ -29,25 +28,32 @@ LEDBoard::DataState::DataState(int defaultColor, int numPanels, int numPanelRows
     this->numPanels = numPanels;
     this->numPanelRows = numPanelRows;
     this->numPanelCols = numPanelCols;
-    midCol = LED_COLS_PER_BOARD/2;
-    midRow = LED_ROWS_PER_BOARD/2;
+    this->defaultColor = defaultColor;
 
-    initBoard(defaultColor);
+    initBoard();
 
     for (auto i : panelConfigs){
         panelOrientations.push_back(i);
     }
 }
 
-void LEDBoard::DataState::initBoard(int defaultColor) {
-    while(!board.empty()){
+void LEDBoard::DataState::initBoard() {
+    while(board.size() > LED_ROWS_PER_BOARD){
         board.pop_back();
     }
 
-    for(int i = 0; i < LED_ROWS_PER_BOARD; ++i){
+    while(board.size() < LED_ROWS_PER_BOARD){
         board.emplace_back();
-        for (int j = 0; j < LED_COLS_PER_BOARD * numPanels; ++j) {
+    }
+    for(int i = 0; i < LED_ROWS_PER_BOARD; ++i){
+        for (int j = 0; j < board[i].size() && j < LED_COLS_PER_BOARD * numPanels; ++j) {
+            board[i][j] = defaultColor;
+        }
+        while(board[i].size() < LED_COLS_PER_BOARD * numPanels) {
             board[i].push_back(defaultColor);
+        }
+        while(board[i].size() > LED_COLS_PER_BOARD * numPanels) {
+            board[i].pop_back();
         }
     }
 }
@@ -201,6 +207,42 @@ void LEDBoard::DataState::releaseReference() {
     numReferences--;
     if(numReferences == 0){
         delete state;
+    }
+}
+
+void LEDBoard::DataState::setDefaultColor(int color) {
+    updateDisplaySettings(color, numPanels, numPanelRows, numPanelCols, panelOrientations);
+}
+
+void LEDBoard::DataState::setPanelNum(int panelCount) {
+    updateDisplaySettings(defaultColor, panelCount, numPanelRows, numPanelCols, panelOrientations);
+}
+
+void LEDBoard::DataState::setPanelRows(int numRows) {
+    updateDisplaySettings(defaultColor, numPanels, numRows, numPanelCols, panelOrientations);
+}
+
+void LEDBoard::DataState::setPanelCols(int numCols) {
+    updateDisplaySettings(defaultColor, numPanels, numPanelRows, numCols, panelOrientations);
+}
+
+void LEDBoard::DataState::setPanelOrientations(vector <Rotations> &orientations) {
+    updateDisplaySettings(defaultColor, numPanels, numPanelRows, numPanelCols, orientations);
+}
+
+void LEDBoard::DataState::updateDisplaySettings(int color, int numPanel, int numRow, int numCol,
+                                                vector <Rotations> &orientations) {
+    this->defaultColor = color;
+    this->numPanels = numPanel;
+    this->numPanelRows = numRow;
+    this->numPanelCols = numCol;
+
+    for (int i = 0; i < orientations.size(); ++i) {
+        if(i < this->panelOrientations.size()) {
+            this->panelOrientations[i] = orientations[i];
+        } else {
+            this->panelOrientations.push_back(orientations[i]);
+        }
     }
 }
 

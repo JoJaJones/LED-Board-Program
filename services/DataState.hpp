@@ -18,16 +18,22 @@ namespace LEDBoard {
         vector<int*> updatedPos;
         vector<Rotations> panelOrientations;
         int numPanels, numPanelRows, numPanelCols;
-        int midRow, midCol;
+        int defaultColor;
         static int numReferences;
         explicit DataState(int defaultColor);
         DataState(int defaultColor, int numPanels, int numRows, int numCols, vector<Rotations> panelConfigs);
         ~DataState();
-        void initBoard(int defaultColor);
+        void initBoard();
     public:
         static DataState* getInstance();
         static DataState* getInstance(int defaultColor);
         static DataState* getInstance(int defaultColor, int numPanels, int numRows, int numCols, vector<Rotations> panelConfigs);
+        void setDefaultColor(int color);
+        void setPanelNum(int panelCount);
+        void setPanelRows(int numRows);
+        void setPanelCols(int numCols);
+        void setPanelOrientations(vector <Rotations> &orientations);
+        void updateDisplaySettings(int color, int numPanel, int numRow, int numCol, vector <Rotations> &orientations);
         void releaseReference();
         void setPixel(int *pos, int colorValue, bool isRawPos = true);
         void setPixel(vector<int *> coords, vector<int> colorValues, bool isRawPos = true);
