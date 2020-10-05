@@ -244,6 +244,8 @@ void LEDBoard::DataState::updateDisplaySettings(int color, int numPanel, int num
             this->panelOrientations.push_back(orientations[i]);
         }
     }
+
+    initBoard();
 }
 
 
