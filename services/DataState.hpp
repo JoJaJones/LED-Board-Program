@@ -13,19 +13,22 @@ namespace LEDBoard {
     using std::vector;
     class DataState {
     private:
+        static DataState *state;
         vector<vector<int>> board;
         vector<int*> updatedPos;
-        vector<LEDBoard::Rotations> panelOrientations;
+        vector<Rotations> panelOrientations;
         int numPanels, numPanelRows, numPanelCols;
         int midRow, midCol;
-        void initBoard(int defaultColor);
-
-
-    public:
-        DataState();
+        static int numReferences;
         explicit DataState(int defaultColor);
-        DataState(int defaultColor, int numPanels, int numPanelRows, int numPanelCols,
-                  vector <Rotations> panelConfigs);
+        DataState(int defaultColor, int numPanels, int numRows, int numCols, vector<Rotations> panelConfigs);
+        ~DataState();
+        void initBoard(int defaultColor);
+    public:
+        static DataState* getInstance();
+        static DataState* getInstance(int defaultColor);
+        static DataState* getInstance(int defaultColor, int numPanels, int numRows, int numCols, vector<Rotations> panelConfigs);
+        void releaseReference();
         void setPixel(int *pos, int colorValue, bool isRawPos = true);
         void setPixel(vector<int *> coords, vector<int> colorValues, bool isRawPos = true);
         void setArea(int* pos0, int* pos1, vector<vector<int>> &data);
@@ -34,7 +37,10 @@ namespace LEDBoard {
         vector<vector<int>>* getBoard();
         void printBoard();
     };
+
+
 }
+
 
 
 #endif //LED_BOARD_PROGRAM_DATASTATE_HPP

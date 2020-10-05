@@ -4,7 +4,7 @@
 
 #include "GradualGradient.hpp"
 
-LEDBoard::GradualGradient::GradualGradient(LEDBoard::DataState *state) : Animation(state) {
+LEDBoard::GradualGradient::GradualGradient() : Animation() {
     curCol = curRow = 0;
     rowColorShift = 24;
     colColorShift = 16;
@@ -34,7 +34,8 @@ void LEDBoard::GradualGradient::processStep() {
 
 void LEDBoard::GradualGradient::updateBoard() {
     int pos[2] {curRow, curCol};
-    viewBoard->setPixel(pos, board[curRow][curCol]);
+    int color = board[curRow][curCol];
+    viewBoard->setPixel(pos, color);
 }
 
 void LEDBoard::GradualGradient::resetBoard() {

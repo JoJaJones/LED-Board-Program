@@ -7,7 +7,8 @@
 
 #include <iostream>
 
-LEDBoard::DataState::DataState() : DataState(0) {}
+int LEDBoard::DataState::numReferences = 0;
+LEDBoard::DataState* LEDBoard::DataState::state = nullptr;
 
 LEDBoard::DataState::DataState(int defaultColor) {
     numPanels = BOARD_CHAIN_LEN;
@@ -39,6 +40,10 @@ LEDBoard::DataState::DataState(int defaultColor, int numPanels, int numPanelRows
 }
 
 void LEDBoard::DataState::initBoard(int defaultColor) {
+    while(!board.empty()){
+        board.pop_back();
+    }
+
     for(int i = 0; i < LED_ROWS_PER_BOARD; ++i){
         board.emplace_back();
         for (int j = 0; j < LED_COLS_PER_BOARD * numPanels; ++j) {
@@ -161,3 +166,42 @@ void LEDBoard::DataState::printBoard() {
 
     std::cout<<std::endl;
 }
+
+LEDBoard::DataState::~DataState() {
+
+}
+
+LEDBoard::DataState *LEDBoard::DataState::getInstance() {
+    if(state == nullptr) {
+        getInstance(0);
+    }else {
+        numReferences++;
+    }
+    return state;
+}
+
+LEDBoard::DataState *LEDBoard::DataState::getInstance(int defaultColor) {
+    if(state == nullptr) {
+        state = new DataState(defaultColor);
+    }
+    numReferences++;
+    return state;
+}
+
+LEDBoard::DataState *LEDBoard::DataState::getInstance(int defaultColor, int numPanels, int numRows, int numCols,
+                                                      std::vector<LEDBoard::Rotations> panelConfigs) {
+    if(state == nullptr){
+        state = new DataState(defaultColor, numPanels, numRows, numCols, panelConfigs);
+    }
+    numReferences++;
+    return state;
+}
+
+void LEDBoard::DataState::releaseReference() {
+    numReferences--;
+    if(numReferences == 0){
+        delete state;
+    }
+}
+
+

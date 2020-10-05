@@ -9,8 +9,10 @@
 #include <Model.hpp>
 
 namespace LEDBoard {
-    class Game : public Model<Position> {
-
+    template <class T>
+    class Game : public Model<Position<T>> {
+    public:
+        virtual bool makeMove(int* start, int* end) = 0;
     };
 }
 

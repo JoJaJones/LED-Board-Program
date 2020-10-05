@@ -6,7 +6,7 @@
 #include <ctime>
 #include "RandomPixels.hpp"
 
-LEDBoard::RandomPixels::RandomPixels(DataState *state) : Animation(state) {
+LEDBoard::RandomPixels::RandomPixels() : Animation() {
     srand(time(nullptr));
     processFrame();
 }

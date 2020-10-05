@@ -17,6 +17,64 @@
 					<DistClean command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;D:/CLionProjects/LED-Board-Program/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="Test_SimGeneral">
+				<Option output="D:/CLionProjects/LED-Board-Program/cmake-build-debug/Test_SimGeneral.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/CLionProjects/LED-Board-Program/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="D:/CLionProjects/LED-Board-Program/lib/lib"/>
+					<Add directory="D:/CLionProjects/LED-Board-Program/lib/include"/>
+					<Add directory="D:/CLionProjects/LED-Board-Program/models"/>
+					<Add directory="D:/CLionProjects/LED-Board-Program/views"/>
+					<Add directory="D:/CLionProjects/LED-Board-Program/controllers"/>
+					<Add directory="D:/CLionProjects/LED-Board-Program/utils"/>
+					<Add directory="D:/CLionProjects/LED-Board-Program/services"/>
+					<Add directory="D:/CLionProjects/LED-Board-Program/tests"/>
+					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/i686-w64-mingw32"/>
+					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/../../../../i686-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;D:/CLionProjects/LED-Board-Program/cmake-build-debug/Makefile&quot;  VERBOSE=1 Test_SimGeneral"/>
+					<CompileFile command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;D:/CLionProjects/LED-Board-Program/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;D:/CLionProjects/LED-Board-Program/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;D:/CLionProjects/LED-Board-Program/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Test_SimGeneral/fast">
+				<Option output="D:/CLionProjects/LED-Board-Program/cmake-build-debug/Test_SimGeneral.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/CLionProjects/LED-Board-Program/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="D:/CLionProjects/LED-Board-Program/lib/lib"/>
+					<Add directory="D:/CLionProjects/LED-Board-Program/lib/include"/>
+					<Add directory="D:/CLionProjects/LED-Board-Program/models"/>
+					<Add directory="D:/CLionProjects/LED-Board-Program/views"/>
+					<Add directory="D:/CLionProjects/LED-Board-Program/controllers"/>
+					<Add directory="D:/CLionProjects/LED-Board-Program/utils"/>
+					<Add directory="D:/CLionProjects/LED-Board-Program/services"/>
+					<Add directory="D:/CLionProjects/LED-Board-Program/tests"/>
+					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/i686-w64-mingw32"/>
+					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/../../../../i686-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;D:/CLionProjects/LED-Board-Program/cmake-build-debug/Makefile&quot;  VERBOSE=1 Test_SimGeneral/fast"/>
+					<CompileFile command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;D:/CLionProjects/LED-Board-Program/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;D:/CLionProjects/LED-Board-Program/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;D:/CLionProjects/LED-Board-Program/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="Test_RandomPixel">
 				<Option output="D:/CLionProjects/LED-Board-Program/cmake-build-debug/Test_RandomPixel.exe" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="D:/CLionProjects/LED-Board-Program/cmake-build-debug"/>
@@ -155,11 +213,19 @@
 			</Target>
 		</Build>
 		<Unit filename="D:/CLionProjects/LED-Board-Program/models/Model.cpp">
+			<Option target="Test_SimGeneral"/>
 			<Option target="Test_RandomPixel"/>
 			<Option target="Test_GradualGradient"/>
 		</Unit>
 		<Unit filename="D:/CLionProjects/LED-Board-Program/models/Model.hpp">
+			<Option target="Test_SimGeneral"/>
 			<Option target="Test_RandomPixel"/>
+			<Option target="Test_GradualGradient"/>
+		</Unit>
+		<Unit filename="D:/CLionProjects/LED-Board-Program/models/PositionFactory.cpp">
+			<Option target="Test_GradualGradient"/>
+		</Unit>
+		<Unit filename="D:/CLionProjects/LED-Board-Program/models/PositionFactory.hpp">
 			<Option target="Test_GradualGradient"/>
 		</Unit>
 		<Unit filename="D:/CLionProjects/LED-Board-Program/models/animations/Animation.cpp">
@@ -182,11 +248,19 @@
 		<Unit filename="D:/CLionProjects/LED-Board-Program/models/animations/RandomPixels.hpp">
 			<Option target="Test_RandomPixel"/>
 		</Unit>
+		<Unit filename="D:/CLionProjects/LED-Board-Program/models/simulations/Simulation.cpp">
+			<Option target="Test_SimGeneral"/>
+		</Unit>
+		<Unit filename="D:/CLionProjects/LED-Board-Program/models/simulations/Simulation.hpp">
+			<Option target="Test_SimGeneral"/>
+		</Unit>
 		<Unit filename="D:/CLionProjects/LED-Board-Program/services/DataState.cpp">
+			<Option target="Test_SimGeneral"/>
 			<Option target="Test_RandomPixel"/>
 			<Option target="Test_GradualGradient"/>
 		</Unit>
 		<Unit filename="D:/CLionProjects/LED-Board-Program/services/DataState.hpp">
+			<Option target="Test_SimGeneral"/>
 			<Option target="Test_RandomPixel"/>
 			<Option target="Test_GradualGradient"/>
 		</Unit>

@@ -6,13 +6,13 @@
 
 
 int main() {
-    auto *state = new LEDBoard::DataState();
-    LEDBoard::Model<int> *testAnim = new LEDBoard::GradualGradient(state);
+    auto *state = LEDBoard::DataState::getInstance();
+    LEDBoard::Model<int> *testAnim = new LEDBoard::GradualGradient();
 
     int count = 1;
     while(count <= 1024 * 3){
         testAnim->processFrame();
-        if(count++ % 1024 == 0){
+        if(++count % 1024 == 0){
             state->printBoard();
         }
     }

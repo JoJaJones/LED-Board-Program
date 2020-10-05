@@ -9,8 +9,16 @@
 #include <Position.hpp>
 
 namespace LEDBoard {
-    class Simulation : public Model<Position>{
+    template <class T>
+    class Simulation : public Model<Position<T>>{
+    private:
+        int stepNum, maxStepNum;
+        bool runForever;
 
+    public:
+        Simulation(int maxStep);
+        explicit Simulation(DataState* state);
+        void initBoard();
     };
 }
 

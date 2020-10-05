@@ -11,8 +11,8 @@ namespace LEDBoard {
     class Animation : public Model<int> {
     public:
 
-        explicit Animation(DataState *state);
-        Animation(DataState *state, int startVal);
+        Animation();
+        explicit Animation(int startVal);
         void initBoard(int val);
         void resetBoard(int val);
     };

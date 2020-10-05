@@ -15,7 +15,7 @@ namespace LEDBoard {
         int rowColorShift, colColorShift;
 
     public:
-        explicit GradualGradient(DataState *state);
+        GradualGradient();
         void updateBoard() override;
         void processStep() override;
         void resetBoard();

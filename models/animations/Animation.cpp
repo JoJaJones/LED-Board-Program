@@ -5,11 +5,11 @@
 #include "Animation.hpp"
 
 
-LEDBoard::Animation::Animation(LEDBoard::DataState *state) : Model<int>(state) {
+LEDBoard::Animation::Animation() : Model<int>() {
     initBoard(0);
 }
 
-LEDBoard::Animation::Animation(LEDBoard::DataState *state, int startVal): Model<int>(state) {
+LEDBoard::Animation::Animation(int startVal): Model<int>() {
     initBoard(startVal);
 }
 

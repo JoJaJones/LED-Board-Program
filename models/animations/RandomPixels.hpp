@@ -12,8 +12,8 @@ namespace LEDBoard {
     private:
         void generateColor(int &curColor);
     public:
-        RandomPixels(DataState *state);
-        void processStep();
+        RandomPixels();
+        void processStep() override;
 
     };
 }

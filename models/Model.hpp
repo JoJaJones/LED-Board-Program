@@ -11,13 +11,13 @@ namespace LEDBoard {
     template <class T>
     class Model {
     protected:
-        DataState *viewBoard{};
+        DataState *viewBoard;
         vector<vector<T>> board;
 
         virtual void processStep() = 0;
         virtual void updateBoard();
     public:
-        explicit Model(DataState *state);
+        Model();
         virtual ~Model();
         void processFrame();
     };
