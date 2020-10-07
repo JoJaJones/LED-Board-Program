@@ -6,8 +6,20 @@
 #define LED_BOARD_PROGRAM_TURNBEHAVIOR_HPP
 
 
-class TurnBehavior {
+#include <vector>
+#include "antconstants.hpp"
 
+class TurnBehavior {
+private:
+    std::vector<int> dirMods;
+    int turnType, numColors;
+
+    void loadDirMods();
+
+public:
+    std::vector<int>* getdirMods();
+    TurnBehavior(int turnType, int numColors);
+    Direction turn(int colorVal, Direction dir);
 };
 
 

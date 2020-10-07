@@ -10,7 +10,8 @@ enum Direction {
     UP = 0,
     RIGHT = 1,
     DOWN = 2,
-    LEFT = 3
+    LEFT = 3,
+    NUM_DIRECTIONS = LEFT + 1
 };
 
 const std::pair<int, int> DIR_SHIFT_VALUES[] = {

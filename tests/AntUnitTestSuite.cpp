@@ -4,6 +4,8 @@
 #include <iostream>
 #include <simulations/langtons_ant/MoveBehavior.hpp>
 #include <cassert>
+#include <vector>
+#include <simulations/langtons_ant/TurnBehavior.hpp>
 
 void testMoveBehavior();
 void testTurnBehavior();
@@ -23,7 +25,7 @@ int main(){
     cout<<"******************* Move Behavior Tests Passed *******************"<<endl<<endl;
 
     cout<<"********************** Testing Turn Behavior *********************"<<endl;
-
+    testTurnBehavior();
     cout<<"******************* Turn Behavior Tests Passed *******************"<<endl<<endl;
 
     cout<<"********************** Testing Edge Behavior *********************"<<endl;
@@ -70,4 +72,40 @@ void testMoveBehavior() {
     cout<<"Adjusting Movement Speed to 0"<<endl;
     testMove.setMoveDistance();
     assert(testMove.getMoveDistance() == 0);
+}
+
+void testTurnBehavior() {
+    std::vector<int> *dirShifts;
+
+    auto *testTurn = new TurnBehavior(1, 2);
+    cout<<"Testing Dir Shift Loading (tT: 1, nC: 2)"<<endl;
+    dirShifts = testTurn->getdirMods();
+    assert((*dirShifts)[0] == 1);
+    assert((*dirShifts)[1] == 3);
+    delete testTurn;
+
+    testTurn = new TurnBehavior(-1, 4);
+    cout<<"Testing Dir Shift Loading (tT: -1, nC: 4)"<<endl;
+    dirShifts = testTurn->getdirMods();
+    assert((*dirShifts)[0] == 3);
+    assert((*dirShifts)[1] == 1);
+    assert((*dirShifts)[2] == 2);
+    assert((*dirShifts)[3] == 0);
+    delete testTurn;
+
+    testTurn = new TurnBehavior(1, 3);
+    cout<<"Testing Dir Shift Loading (tT: 1, nC: 3)"<<endl;
+    dirShifts = testTurn->getdirMods();
+    assert((*dirShifts)[0] == 1);
+    assert((*dirShifts)[1] == 3);
+    assert((*dirShifts)[2] == 2);
+    delete testTurn;
+
+    testTurn = new TurnBehavior(-1, 3);
+    cout<<"Testing Dir Shift Loading (tT: -1, nC: 3)"<<endl;
+    dirShifts = testTurn->getdirMods();
+    assert((*dirShifts)[0] == 3);
+    assert((*dirShifts)[1] == 1);
+    assert((*dirShifts)[2] == 2);
+    delete testTurn;
 }
