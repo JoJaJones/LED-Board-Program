@@ -20,8 +20,21 @@ std::pair<int, int> EdgeBehavior::adjustPos(std::pair<int, int> nextPos) {
     return nextPos;
 }
 
+bool EdgeBehavior::isOnEdge(std::pair<int, int> curPos, Direction direction) {
+    std::pair<int, int> nextPos = moveBehavior->move(curPos, direction, 1);
+    if (std::min(nextPos.first, nextPos.second) < 0) {
+        return true;
+    }
+
+    if (nextPos.first >= LEDBoard::PIXEL_ROWS || nextPos.second >= LEDBoard::PIXEL_COLS){
+        return true;
+    }
+
+    return false;
+}
+
 bool EdgeBehavior::isEdge(std::pair<int, int> curPos, Direction direction) {
-    std::pair<int, int> nextPos = moveBehavior->move(curPos, direction);
+    std::pair<int, int> nextPos = moveBehavior->move(curPos, direction, -1);
     if(nextPos.first < 0 || nextPos.second < 0){
         return true;
     }
@@ -42,7 +55,7 @@ void EdgeBehavior::setTurnBehavior(TurnBehavior *turnBx) {
 }
 
 std::pair<int, int> Teleport::handleEdge(std::pair<int, int> curPos, Direction &direction, int colorVal) {
-    std::pair<int, int> nextPos = moveBehavior->move(curPos, direction);
+    std::pair<int, int> nextPos = moveBehavior->move(curPos, direction, -1);
 
     nextPos.first += LEDBoard::PIXEL_ROWS;
     nextPos.first %= LEDBoard::PIXEL_ROWS;
@@ -54,7 +67,7 @@ std::pair<int, int> Teleport::handleEdge(std::pair<int, int> curPos, Direction &
 }
 
 std::pair<int, int> UTurn::handleEdge(std::pair<int, int> curPos, Direction &direction, int colorVal) {
-    std::pair<int, int> nextPos = adjustPos(moveBehavior->move(curPos, direction));
+    std::pair<int, int> nextPos = adjustPos(moveBehavior->move(curPos, direction, -1));
 
     direction = static_cast<Direction>((direction + NUM_DIRECTIONS / 2) % NUM_DIRECTIONS);
 
@@ -66,7 +79,7 @@ Death::Death(bool remove) {
 }
 
 std::pair<int, int> Death::handleEdge(std::pair<int, int> curPos, Direction &direction, int colorVal) {
-    std::pair<int, int> nextPos = adjustPos(moveBehavior->move(curPos, direction));
+    std::pair<int, int> nextPos = adjustPos(moveBehavior->move(curPos, direction, -1));
 
     if(removeOnDeath){
         nextPos = std::make_pair(-1,-1);
@@ -84,12 +97,12 @@ std::pair<int, int> Wall::handleEdge(std::pair<int, int> curPos, Direction &dire
     // if ant not at the edge move there first
     if(std::min(curPos.first, curPos.second) - 1 >= 0 && curPos.first + 1 < LEDBoard::PIXEL_ROWS
             && curPos.second + 1 < LEDBoard::PIXEL_COLS) {
-        nextPos = adjustPos(moveBehavior->move(curPos, direction));
+        nextPos = adjustPos(moveBehavior->move(curPos, direction, -1));
     } else {
         nextPos = curPos;
 
         // while loop to prevent getting stuck in the corners
-        while (isEdge(curPos, direction)) {
+        while (isOnEdge(curPos, direction)) {
             direction = turnBehavior->turn(colorVal, direction);
         }
     }
@@ -97,7 +110,7 @@ std::pair<int, int> Wall::handleEdge(std::pair<int, int> curPos, Direction &dire
 }
 
 RandomTeleport::RandomTeleport(int antSize)
-    : rowRange(0, LEDBoard::PIXEL_ROWS - antSize), colRange(LEDBoard::PIXEL_COLS - antSize) {}
+    : rowRange(0, LEDBoard::PIXEL_ROWS - antSize), colRange(0, LEDBoard::PIXEL_COLS - antSize) {}
 
 std::pair<int, int> RandomTeleport::handleEdge(std::pair<int, int> curPos, Direction &direction, int colorVal) {
     return std::make_pair(rowRange(randGen), colRange(randGen));

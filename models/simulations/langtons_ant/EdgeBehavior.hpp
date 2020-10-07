@@ -21,6 +21,7 @@ protected:
 public:
     virtual ~EdgeBehavior() = default;
     bool isEdge(std::pair<int, int> curPos, Direction direction);
+    bool isOnEdge(std::pair<int, int> curPos, Direction direction);
     virtual std::pair<int, int> handleEdge(std::pair<int, int> curPos,
                                            Direction &direction, int colorVal) = 0;
     void setMoveBehavior(MoveBehavior *moveBx);

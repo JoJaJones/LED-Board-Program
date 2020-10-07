@@ -40,7 +40,7 @@ void testMoveBehavior() {
     std::pair<int, int> posStart(5,5);
     std::pair<int, int> posResult;
 
-    posResult = testMove.move(posStart, UP);
+    posResult = testMove.move(posStart, UP );
     cout<<"Testing Up Movement"<<endl;
     assert(posStart.first - 1 == posResult.first && posStart.second == posResult.second);
     posResult = testMove.move(posStart, DOWN);
@@ -176,7 +176,6 @@ void testEdgeBehavior() {
     testDeathEdgeBehavior(testEdge, moveBx, turnBx);
     cout<<"---------------------- Death Tests Passed ------------------------"<<endl<<endl;
 
-    return;
     testEdge = new Wall();
     testEdge->setMoveBehavior(moveBx);
     testEdge->setTurnBehavior(turnBx);
@@ -244,20 +243,24 @@ void testUTurnEdgeBehavior(EdgeBehavior *testEdge, MoveBehavior *moveBx) {
 
     cout<<"Testing Edge UTurns with Move Distance == 1"<<endl;
     direction = UP;
-    if(testEdge->isEdge(pos, direction)) testEdge->handleEdge(pos, direction, 0);
+    if(testEdge->isEdge(pos, direction))
+        testEdge->handleEdge(pos, direction, 0);
     assert(direction == DOWN);
 
     direction = static_cast<Direction>((direction + 3) % NUM_DIRECTIONS);
-    if(testEdge->isEdge(pos, direction)) testEdge->handleEdge(pos, direction, 0);
+    if(testEdge->isEdge(pos, direction))
+        testEdge->handleEdge(pos, direction, 0);
     assert(direction == LEFT);
 
     pos = std::make_pair(LEDBoard::PIXEL_ROWS - 1, 0);
     direction = static_cast<Direction>((direction + 3) % NUM_DIRECTIONS);
-    if(testEdge->isEdge(pos, direction)) testEdge->handleEdge(pos, direction, 0);
+    if(testEdge->isEdge(pos, direction))
+        testEdge->handleEdge(pos, direction, 0);
     assert(direction == UP);
 
     direction = static_cast<Direction>((direction + 3) % NUM_DIRECTIONS);
-    if(testEdge->isEdge(pos, direction)) testEdge->handleEdge(pos, direction, 0);
+    if(testEdge->isEdge(pos, direction))
+        testEdge->handleEdge(pos, direction, 0);
     assert(direction == RIGHT);
 
 
@@ -266,20 +269,24 @@ void testUTurnEdgeBehavior(EdgeBehavior *testEdge, MoveBehavior *moveBx) {
     pos = std::make_pair(12, LEDBoard::PIXEL_COLS - 13);
     moveBx->setMoveDistance(15);
     direction = UP;
-    if(testEdge->isEdge(pos, direction)) testEdge->handleEdge(pos, direction, 0);
+    if(testEdge->isEdge(pos, direction))
+        testEdge->handleEdge(pos, direction, 0);
     assert(direction == DOWN);
 
     direction = static_cast<Direction>((direction + 3) % NUM_DIRECTIONS);
-    if(testEdge->isEdge(pos, direction)) testEdge->handleEdge(pos, direction, 0);
+    if(testEdge->isEdge(pos, direction))
+        testEdge->handleEdge(pos, direction, 0);
     assert(direction == LEFT);
 
     pos = std::make_pair(LEDBoard::PIXEL_ROWS - 10, 10);
     direction = static_cast<Direction>((direction + 3) % NUM_DIRECTIONS);
-    if(testEdge->isEdge(pos, direction)) testEdge->handleEdge(pos, direction, 0);
+    if(testEdge->isEdge(pos, direction))
+        testEdge->handleEdge(pos, direction, 0);
     assert(direction == UP);
 
     direction = static_cast<Direction>((direction + 3) % NUM_DIRECTIONS);
-    if(testEdge->isEdge(pos, direction)) testEdge->handleEdge(pos, direction, 0);
+    if(testEdge->isEdge(pos, direction))
+        testEdge->handleEdge(pos, direction, 0);
     assert(direction == RIGHT);
 
     moveBx->setMoveDistance(1);
@@ -288,24 +295,94 @@ void testUTurnEdgeBehavior(EdgeBehavior *testEdge, MoveBehavior *moveBx) {
     delete testEdge;
 }
 
-// TODO finish this test function
 void testWallEdgeBehavior(EdgeBehavior *testEdge, MoveBehavior *moveBx) {
-    std::pair<int, int> pos = std::make_pair(0, 0);
+    std::pair<int, int> pos = std::make_pair(0, 15);
     Direction direction;
 
     cout<<"Testing Edge Walls with Move Distance == 1"<<endl;
     direction = UP;
-    direction = static_cast<Direction>((direction + 1) % NUM_DIRECTIONS);
-    direction = static_cast<Direction>((direction + 1) % NUM_DIRECTIONS);
-    direction = static_cast<Direction>((direction + 1) % NUM_DIRECTIONS);
+    if(testEdge->isEdge(pos, direction))
+        testEdge->handleEdge(pos, direction, 0);
+    assert(direction == RIGHT);
+
+    pos = std::make_pair(15, LEDBoard::PIXEL_COLS - 1);
+    if(testEdge->isEdge(pos, direction))
+        testEdge->handleEdge(pos, direction, 0);
+    assert(direction == DOWN);
+
+    pos = std::make_pair(LEDBoard::PIXEL_ROWS - 1, 15);
+    if(testEdge->isEdge(pos, direction))
+        testEdge->handleEdge(pos, direction, 0);
+    assert(direction == LEFT);
+
+    pos = std::make_pair(15, 0);
+    if(testEdge->isEdge(pos, direction))
+        testEdge->handleEdge(pos, direction, 0);
+    assert(direction == UP);
 
 
     cout<<"Testing Edge Walls with Move Distance != 1"<<endl;
     moveBx->setMoveDistance(15);
-    direction = UP;
-    direction = static_cast<Direction>((direction + 1) % NUM_DIRECTIONS);
-    direction = static_cast<Direction>((direction + 1) % NUM_DIRECTIONS);
-    direction = static_cast<Direction>((direction + 1) % NUM_DIRECTIONS);
+    pos = std::make_pair(10, 10);
+    if(testEdge->isEdge(pos, direction))
+        pos = testEdge->handleEdge(pos, direction, 0);
+    assert(direction == UP);
+    assert(pos.first == 0);
+    if(testEdge->isEdge(pos, direction))
+        testEdge->handleEdge(pos, direction, 0);
+    assert(direction == RIGHT);
+
+    pos = std::make_pair(20, 20);
+    if(testEdge->isEdge(pos, direction))
+        pos = testEdge->handleEdge(pos, direction, 0);
+    assert(direction == RIGHT);
+    assert(pos.second == LEDBoard::PIXEL_COLS - 1);
+    if(testEdge->isEdge(pos, direction))
+        testEdge->handleEdge(pos, direction, 0);
+    assert(direction == DOWN);
+
+    pos = std::make_pair(20, 20);
+    if(testEdge->isEdge(pos, direction))
+        pos = testEdge->handleEdge(pos, direction, 0);
+    assert(direction == DOWN);
+    assert(pos.first == LEDBoard::PIXEL_ROWS - 1);
+    if(testEdge->isEdge(pos, direction))
+        testEdge->handleEdge(pos, direction, 0);
+    assert(direction == LEFT);
+
+    pos = std::make_pair(10, 10);
+    if(testEdge->isEdge(pos, direction))
+        pos = testEdge->handleEdge(pos, direction, 0);
+    assert(direction == LEFT);
+    assert(pos.second == 0);
+    if(testEdge->isEdge(pos, direction))
+        testEdge->handleEdge(pos, direction, 0);
+    assert(direction == UP);
+
+    cout<<"Testing Corner Walls"<<endl;
+    moveBx->setMoveDistance(1);
+    pos = std::make_pair(0, LEDBoard::PIXEL_COLS - 1);
+    if(testEdge->isEdge(pos, direction))
+        pos = testEdge->handleEdge(pos, direction, 0);
+    assert(direction == DOWN);
+    direction = RIGHT;
+
+    pos = std::make_pair(LEDBoard::PIXEL_ROWS - 1, LEDBoard::PIXEL_COLS - 1);
+    if(testEdge->isEdge(pos, direction))
+        testEdge->handleEdge(pos, direction, 0);
+    assert(direction == LEFT);
+    direction = DOWN;
+
+    pos = std::make_pair(LEDBoard::PIXEL_ROWS - 1, 0);
+    if(testEdge->isEdge(pos, direction))
+        testEdge->handleEdge(pos, direction, 0);
+    assert(direction == UP);
+    direction = LEFT;
+
+    pos = std::make_pair(0, 0);
+    if(testEdge->isEdge(pos, direction))
+        testEdge->handleEdge(pos, direction, 0);
+    assert(direction == RIGHT);
 
     moveBx->setMoveDistance(1);
     testEdge->setMoveBehavior(nullptr);
@@ -319,23 +396,27 @@ void testDeathEdgeBehavior(EdgeBehavior *testEdge, MoveBehavior *moveBx, TurnBeh
 
     cout<<"Testing Edge Deaths with Move Distance == 1"<<endl;
     direction = UP;
-    if(testEdge->isEdge(pos, direction)) testEdge->handleEdge(pos, direction, 0);
+    if(testEdge->isEdge(pos, direction))
+testEdge->handleEdge(pos, direction, 0);
     assert(moveBx->getMoveDistance() == 0);
 
     moveBx->setMoveDistance(1);
     direction = static_cast<Direction>((direction + 1) % NUM_DIRECTIONS);
-    if(testEdge->isEdge(pos, direction)) testEdge->handleEdge(pos, direction, 0);
+    if(testEdge->isEdge(pos, direction))
+testEdge->handleEdge(pos, direction, 0);
     assert(moveBx->getMoveDistance() == 0);
 
     moveBx->setMoveDistance(1);
     pos = std::make_pair(LEDBoard::PIXEL_ROWS - 1, 0);
     direction = static_cast<Direction>((direction + 1) % NUM_DIRECTIONS);
-    if(testEdge->isEdge(pos, direction)) testEdge->handleEdge(pos, direction, 0);
+    if(testEdge->isEdge(pos, direction))
+testEdge->handleEdge(pos, direction, 0);
     assert(moveBx->getMoveDistance() == 0);
 
     moveBx->setMoveDistance(1);
     direction = static_cast<Direction>((direction + 1) % NUM_DIRECTIONS);
-    if(testEdge->isEdge(pos, direction)) testEdge->handleEdge(pos, direction, 0);
+    if(testEdge->isEdge(pos, direction))
+testEdge->handleEdge(pos, direction, 0);
     assert(moveBx->getMoveDistance() == 0);
 
 
@@ -343,23 +424,27 @@ void testDeathEdgeBehavior(EdgeBehavior *testEdge, MoveBehavior *moveBx, TurnBeh
     pos = std::make_pair(10, LEDBoard::PIXEL_COLS - 12);
     moveBx->setMoveDistance(15);
     direction = UP;
-    if(testEdge->isEdge(pos, direction)) testEdge->handleEdge(pos, direction, 0);
+    if(testEdge->isEdge(pos, direction))
+testEdge->handleEdge(pos, direction, 0);
     assert(moveBx->getMoveDistance() == 0);
 
     moveBx->setMoveDistance(15);
     direction = static_cast<Direction>((direction + 1) % NUM_DIRECTIONS);
-    if(testEdge->isEdge(pos, direction)) testEdge->handleEdge(pos, direction, 0);
+    if(testEdge->isEdge(pos, direction))
+testEdge->handleEdge(pos, direction, 0);
     assert(moveBx->getMoveDistance() == 0);
 
     pos = std::make_pair(LEDBoard::PIXEL_ROWS - 13, 12);
     moveBx->setMoveDistance(15);
     direction = static_cast<Direction>((direction + 1) % NUM_DIRECTIONS);
-    if(testEdge->isEdge(pos, direction)) testEdge->handleEdge(pos, direction, 0);
+    if(testEdge->isEdge(pos, direction))
+testEdge->handleEdge(pos, direction, 0);
     assert(moveBx->getMoveDistance() == 0);
 
     moveBx->setMoveDistance(15);
     direction = static_cast<Direction>((direction + 1) % NUM_DIRECTIONS);
-    if(testEdge->isEdge(pos, direction)) testEdge->handleEdge(pos, direction, 0);
+    if(testEdge->isEdge(pos, direction))
+testEdge->handleEdge(pos, direction, 0);
     assert(moveBx->getMoveDistance() == 0);
 
     testEdge->setTurnBehavior(nullptr);
@@ -400,24 +485,109 @@ void testDeathEdgeBehavior(EdgeBehavior *testEdge, MoveBehavior *moveBx, TurnBeh
     delete testEdge;
 }
 
-
-// Todo finish this test function
 void testRandomTeleportEdgeBehavior(EdgeBehavior *testEdge, MoveBehavior *moveBx) {
-    std::pair<int, int> pos = std::make_pair(0, 0);
+    std::pair<int, int> pos;
     Direction direction;
+    int totalR, totalC, numTries = 100;
 
     cout<<"Testing Edge RanTele with Move Distance == 1"<<endl;
     direction = UP;
+    totalR = 0;
+    totalC = 0;
+    for (int i = 0; i < numTries; ++i) {
+        pos = std::make_pair(0,10);
+        pos = testEdge->handleEdge(pos, direction, 0);
+        totalR += pos.first;
+        totalC += pos.second;
+    }
+    assert(totalC / numTries < LEDBoard::PIXEL_COLS && totalC / numTries > 0);
+    assert(totalR / numTries < LEDBoard::PIXEL_COLS && totalR / numTries > 0);
+
     direction = static_cast<Direction>((direction + 1) % NUM_DIRECTIONS);
+    totalR = 0;
+    totalC = 0;
+    for (int i = 0; i < numTries; ++i) {
+        pos = std::make_pair(15, LEDBoard::PIXEL_COLS - 1);
+        pos = testEdge->handleEdge(pos, direction, 0);
+        totalR += pos.first;
+        totalC += pos.second;
+    }
+    assert(totalC / numTries < LEDBoard::PIXEL_COLS && totalC / numTries > 0);
+    assert(totalR / numTries < LEDBoard::PIXEL_COLS && totalR / numTries > 0);
+
     direction = static_cast<Direction>((direction + 1) % NUM_DIRECTIONS);
+    totalR = 0;
+    totalC = 0;
+    for (int i = 0; i < numTries; ++i) {
+        pos = std::make_pair(LEDBoard::PIXEL_ROWS - 1,10);
+        pos = testEdge->handleEdge(pos, direction, 0);
+        totalR += pos.first;
+        totalC += pos.second;
+    }
+    assert(totalC / numTries < LEDBoard::PIXEL_COLS && totalC / numTries > 0);
+    assert(totalR / numTries < LEDBoard::PIXEL_COLS && totalR / numTries > 0);
+
     direction = static_cast<Direction>((direction + 1) % NUM_DIRECTIONS);
+    totalR = 0;
+    totalC = 0;
+    for (int i = 0; i < numTries; ++i) {
+        pos = std::make_pair(15,0);
+        pos = testEdge->handleEdge(pos, direction, 0);
+        totalR += pos.first;
+        totalC += pos.second;
+    }
+    assert(totalC / numTries < LEDBoard::PIXEL_COLS && totalC / numTries > 0);
+    assert(totalR / numTries < LEDBoard::PIXEL_COLS && totalR / numTries > 0);
 
     moveBx->setMoveDistance(15);
     cout<<"Testing Edge RanTele with Move Distance != 1"<<endl;
     direction = UP;
+    totalR = 0;
+    totalC = 0;
+    for (int i = 0; i < numTries; ++i) {
+        pos = std::make_pair(10,10);
+        pos = testEdge->handleEdge(pos, direction, 0);
+        totalR += pos.first;
+        totalC += pos.second;
+    }
+    assert(totalC / numTries < LEDBoard::PIXEL_COLS && totalC / numTries > 0);
+    assert(totalR / numTries < LEDBoard::PIXEL_COLS && totalR / numTries > 0);
+
     direction = static_cast<Direction>((direction + 1) % NUM_DIRECTIONS);
+    totalR = 0;
+    totalC = 0;
+    for (int i = 0; i < numTries; ++i) {
+        pos = std::make_pair(LEDBoard::PIXEL_ROWS - 13,LEDBoard::PIXEL_COLS - 8);
+        pos = testEdge->handleEdge(pos, direction, 0);
+        totalR += pos.first;
+        totalC += pos.second;
+    }
+    assert(totalC / numTries < LEDBoard::PIXEL_COLS && totalC / numTries > 0);
+    assert(totalR / numTries < LEDBoard::PIXEL_COLS && totalR / numTries > 0);
+
     direction = static_cast<Direction>((direction + 1) % NUM_DIRECTIONS);
+    totalR = 0;
+    totalC = 0;
+    for (int i = 0; i < numTries; ++i) {
+        pos = std::make_pair(LEDBoard::PIXEL_ROWS - 13,LEDBoard::PIXEL_COLS - 8);
+        pos = testEdge->handleEdge(pos, direction, 0);
+        totalR += pos.first;
+        totalC += pos.second;
+    }
+    assert(totalC / numTries < LEDBoard::PIXEL_COLS && totalC / numTries > 0);
+    assert(totalR / numTries < LEDBoard::PIXEL_COLS && totalR / numTries > 0);
+
     direction = static_cast<Direction>((direction + 1) % NUM_DIRECTIONS);
+    totalR = 0;
+    totalC = 0;
+    for (int i = 0; i < numTries; ++i) {
+        pos = std::make_pair(10,10);
+        pos = testEdge->handleEdge(pos, direction, 0);
+        totalR += pos.first;
+        totalC += pos.second;
+    }
+    assert(totalC / numTries < LEDBoard::PIXEL_COLS && totalC / numTries > 0);
+    assert(totalR / numTries < LEDBoard::PIXEL_COLS && totalR / numTries > 0);
 
     moveBx->setMoveDistance(1);
     testEdge->setMoveBehavior(nullptr);

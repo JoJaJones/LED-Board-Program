@@ -13,7 +13,7 @@ private:
 
 public:
     explicit MoveBehavior(int moveDist = 1);
-    std::pair<int, int> move(std::pair<int, int> &pos, Direction dir);
+    std::pair<int, int> move(std::pair<int, int> &pos, Direction dir, int distance = -1);
     void setMoveDistance(int newDistance = 0);
     int getMoveDistance();
 };
