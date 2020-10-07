@@ -26,7 +26,7 @@ bool EdgeBehavior::isEdge(std::pair<int, int> curPos, Direction direction) {
         return true;
     }
 
-    if(nextPos.first > LEDBoard::PIXEL_ROWS || nextPos.second > LEDBoard::PIXEL_COLS){
+    if(nextPos.first >= LEDBoard::PIXEL_ROWS || nextPos.second >= LEDBoard::PIXEL_COLS){
         return true;
     }
 

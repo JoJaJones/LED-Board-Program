@@ -19,6 +19,7 @@ protected:
 
     std::pair<int, int> adjustPos(std::pair<int, int> nextPos);
 public:
+    virtual ~EdgeBehavior() = default;
     bool isEdge(std::pair<int, int> curPos, Direction direction);
     virtual std::pair<int, int> handleEdge(std::pair<int, int> curPos,
                                            Direction &direction, int colorVal) = 0;
@@ -50,7 +51,7 @@ public:
     std::pair<int, int> handleEdge(std::pair<int, int> curPos, Direction &direction, int colorVal) override;
 };
 
-class RandomTeleport : EdgeBehavior {
+class RandomTeleport : public EdgeBehavior {
 private:
     std::default_random_engine randGen;
     std::uniform_int_distribution<int> rowRange;
