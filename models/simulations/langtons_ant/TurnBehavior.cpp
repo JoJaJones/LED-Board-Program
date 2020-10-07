@@ -60,7 +60,9 @@ void TurnBehavior::loadDirMods() {
 }
 
 Direction TurnBehavior::turn(int colorVal, Direction dir) {
-    return LEFT;
+    int tempDir = dir + dirMods[colorVal];
+    tempDir %= NUM_DIRECTIONS;
+    return static_cast<Direction>(tempDir);
 }
 
 std::vector<int> *TurnBehavior::getdirMods() {

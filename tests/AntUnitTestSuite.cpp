@@ -108,4 +108,32 @@ void testTurnBehavior() {
     assert((*dirShifts)[1] == 1);
     assert((*dirShifts)[2] == 2);
     delete testTurn;
+
+    testTurn = new TurnBehavior(1, 2);
+    cout<<"Testing Turns (tT: 1, nC: 2)"<<endl;
+    assert(testTurn->turn(0, UP) == RIGHT);
+    assert(testTurn->turn(1, LEFT) == DOWN);
+    delete testTurn;
+
+    testTurn = new TurnBehavior(-1, 4);
+    cout<<"Testing Turns (tT: -1, nC: 4)"<<endl;
+    assert(testTurn->turn(0, UP) == LEFT);
+    assert(testTurn->turn(1, UP) == RIGHT);
+    assert(testTurn->turn(2, LEFT) == RIGHT);
+    assert(testTurn->turn(3, DOWN) == DOWN);
+    delete testTurn;
+
+    testTurn = new TurnBehavior(1, 3);
+    cout<<"Testing Turns (tT: 1, nC: 3)"<<endl;
+    assert(testTurn->turn(0, UP) == RIGHT);
+    assert(testTurn->turn(1, UP) == LEFT);
+    assert(testTurn->turn(2, UP) == DOWN);
+    delete testTurn;
+
+    testTurn = new TurnBehavior(-1, 3);
+    cout<<"Testing Turns (tT: -1, nC: 3)"<<endl;
+    assert(testTurn->turn(0, UP) == LEFT);
+    assert(testTurn->turn(1, UP) == RIGHT);
+    assert(testTurn->turn(2, UP) == DOWN);
+    delete testTurn;
 }
