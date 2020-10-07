@@ -1,5 +1,5 @@
 //
-// Created by theom on 10/6/2020.
+// Created by Josh Jones on 10/6/2020.
 //
 #include <iostream>
 #include <simulations/langtons_ant/MoveBehavior.hpp>
@@ -20,7 +20,7 @@ void testRandomTeleportEdgeBehavior(EdgeBehavior *testEdge, MoveBehavior *moveBx
 using std::cout;
 using std::endl;
 
-int main(){
+int main() {
     cout<<"********************** Testing Move Behavior *********************"<<endl;
     testMoveBehavior();
     cout<<"******************* Move Behavior Tests Passed *******************"<<endl<<endl;
