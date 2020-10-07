@@ -10,7 +10,7 @@
 
 namespace LEDBoard {
     template <class T>
-    class Simulation : public Model<Position<T>>{
+    class Simulation : public Model<T>{
     private:
         int stepNum, maxStepNum;
         bool runForever;

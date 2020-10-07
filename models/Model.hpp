@@ -23,5 +23,4 @@ namespace LEDBoard {
     };
 }
 
-
 #endif //LED_BOARD_PROGRAM_MODEL_HPP

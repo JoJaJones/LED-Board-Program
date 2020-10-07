@@ -8,8 +8,10 @@ set(CMAKE_CXX_STANDARD 14)
 add_executable(Test_RandomPixel tests/RandomPixelAnimTest.cpp services/DataState.cpp
         models/Model.cpp models/animations/Animation.cpp models/animations/RandomPixels.cpp)
 add_executable(Test_GradualGradient tests/GradualGradientTests.cpp services/DataState.cpp models/Model.cpp
-        models/animations/Animation.cpp models/animations/GradualGradient.cpp models/PositionFactory.cpp models/PositionFactory.hpp)
+        models/animations/Animation.cpp models/animations/GradualGradient.cpp models/PositionFactory.cpp models/PositionFactory.hpp models/simulations/langtons_ant/AntPosition.cpp models/simulations/langtons_ant/AntPosition.hpp models/simulations/langtons_ant/Ant.cpp models/simulations/langtons_ant/Ant.hpp)
 add_executable(Test_SimGeneral models/simulations/Simulation.cpp services/DataState.cpp models/Model.cpp)
+add_executable(Test_AntGeneral models/simulations/langtons_ant/MoveBehavior.cpp models/simulations/langtons_ant/EdgeBehavior.cpp
+        models/simulations/langtons_ant/TurnBehavior.cpp tests/AntUnitTestSuite.cpp)
 
 #main executable
 #add_executable(LED_Board_Program main.cpp models/Model.cpp models/Model.hpp services/board_constants.hpp views/LEDDisplay.cpp views/LEDDisplay.hpp services/DataState.cpp services/DataState.hpp controllers/LEDBoardEngine.cpp controllers/LEDBoardEngine.hpp views/View.cpp views/View.hpp services/constants.hpp tests/DataStateTests.cpp models/animations/Animation.cpp models/animations/Animation.hpp models/games/Game.cpp models/games/Game.hpp models/Position.cpp models/Position.hpp models/simulations/Simulation.cpp models/simulations/Simulation.hpp models/animations/RandomPixels.cpp models/animations/RandomPixels.hpp tests/RandomPixelAnimTest.cpp)
