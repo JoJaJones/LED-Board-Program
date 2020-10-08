@@ -35,7 +35,7 @@ namespace LEDBoard {
         void setPanelCols(int numCols);
         void setPanelOrientations(vector <Rotations> &orientations);
         void updateDisplaySettings(int color, int numPanel, int numRow, int numCol, vector <Rotations> &orientations);
-        static void releaseReference();
+        static DataState* releaseReference();
         void setPixel(int *pos, int colorValue, bool isRawPos = true);
         void setPixel(vector<int *> coords, vector<int> colorValues, bool isRawPos = true);
         void setArea(int* pos0, int* pos1, vector<vector<int>> &data);

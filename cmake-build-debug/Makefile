@@ -75,17 +75,6 @@ CMAKE_BINARY_DIR = D:\CLionProjects\LED-Board-Program\cmake-build-debug
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	"D:\Program Files\JetBrains\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -96,6 +85,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	"D:\Program Files\JetBrains\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -156,6 +156,19 @@ Test_RandomPixel/fast:
 .PHONY : Test_RandomPixel/fast
 
 #=============================================================================
+# Target rules for targets named Test_DataState
+
+# Build rule for target.
+Test_DataState: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Test_DataState
+.PHONY : Test_DataState
+
+# fast build rule for target.
+Test_DataState/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_DataState.dir\build.make CMakeFiles/Test_DataState.dir/build
+.PHONY : Test_DataState/fast
+
+#=============================================================================
 # Target rules for targets named Test_GradualGradient
 
 # Build rule for target.
@@ -169,6 +182,32 @@ Test_GradualGradient/fast:
 .PHONY : Test_GradualGradient/fast
 
 #=============================================================================
+# Target rules for targets named Test_AntBehavior
+
+# Build rule for target.
+Test_AntBehavior: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Test_AntBehavior
+.PHONY : Test_AntBehavior
+
+# fast build rule for target.
+Test_AntBehavior/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_AntBehavior.dir\build.make CMakeFiles/Test_AntBehavior.dir/build
+.PHONY : Test_AntBehavior/fast
+
+#=============================================================================
+# Target rules for targets named quick_test
+
+# Build rule for target.
+quick_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 quick_test
+.PHONY : quick_test
+
+# fast build rule for target.
+quick_test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\quick_test.dir\build.make CMakeFiles/quick_test.dir/build
+.PHONY : quick_test/fast
+
+#=============================================================================
 # Target rules for targets named Test_AntGeneral
 
 # Build rule for target.
@@ -180,6 +219,19 @@ Test_AntGeneral: cmake_check_build_system
 Test_AntGeneral/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_AntGeneral.dir\build.make CMakeFiles/Test_AntGeneral.dir/build
 .PHONY : Test_AntGeneral/fast
+
+#=============================================================================
+# Target rules for targets named Test_BxFactory
+
+# Build rule for target.
+Test_BxFactory: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Test_BxFactory
+.PHONY : Test_BxFactory
+
+# fast build rule for target.
+Test_BxFactory/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_BxFactory.dir\build.make CMakeFiles/Test_BxFactory.dir/build
+.PHONY : Test_BxFactory/fast
 
 models/Model.obj: models/Model.cpp.obj
 
@@ -213,33 +265,6 @@ models/Model.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_RandomPixel.dir\build.make CMakeFiles/Test_RandomPixel.dir/models/Model.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_GradualGradient.dir\build.make CMakeFiles/Test_GradualGradient.dir/models/Model.cpp.s
 .PHONY : models/Model.cpp.s
-
-models/PositionFactory.obj: models/PositionFactory.cpp.obj
-
-.PHONY : models/PositionFactory.obj
-
-# target to build an object file
-models/PositionFactory.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_GradualGradient.dir\build.make CMakeFiles/Test_GradualGradient.dir/models/PositionFactory.cpp.obj
-.PHONY : models/PositionFactory.cpp.obj
-
-models/PositionFactory.i: models/PositionFactory.cpp.i
-
-.PHONY : models/PositionFactory.i
-
-# target to preprocess a source file
-models/PositionFactory.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_GradualGradient.dir\build.make CMakeFiles/Test_GradualGradient.dir/models/PositionFactory.cpp.i
-.PHONY : models/PositionFactory.cpp.i
-
-models/PositionFactory.s: models/PositionFactory.cpp.s
-
-.PHONY : models/PositionFactory.s
-
-# target to generate assembly for a file
-models/PositionFactory.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_GradualGradient.dir\build.make CMakeFiles/Test_GradualGradient.dir/models/PositionFactory.cpp.s
-.PHONY : models/PositionFactory.cpp.s
 
 models/animations/Animation.obj: models/animations/Animation.cpp.obj
 
@@ -358,7 +383,7 @@ models/simulations/langtons_ant/Ant.obj: models/simulations/langtons_ant/Ant.cpp
 
 # target to build an object file
 models/simulations/langtons_ant/Ant.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_GradualGradient.dir\build.make CMakeFiles/Test_GradualGradient.dir/models/simulations/langtons_ant/Ant.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_AntGeneral.dir\build.make CMakeFiles/Test_AntGeneral.dir/models/simulations/langtons_ant/Ant.cpp.obj
 .PHONY : models/simulations/langtons_ant/Ant.cpp.obj
 
 models/simulations/langtons_ant/Ant.i: models/simulations/langtons_ant/Ant.cpp.i
@@ -367,7 +392,7 @@ models/simulations/langtons_ant/Ant.i: models/simulations/langtons_ant/Ant.cpp.i
 
 # target to preprocess a source file
 models/simulations/langtons_ant/Ant.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_GradualGradient.dir\build.make CMakeFiles/Test_GradualGradient.dir/models/simulations/langtons_ant/Ant.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_AntGeneral.dir\build.make CMakeFiles/Test_AntGeneral.dir/models/simulations/langtons_ant/Ant.cpp.i
 .PHONY : models/simulations/langtons_ant/Ant.cpp.i
 
 models/simulations/langtons_ant/Ant.s: models/simulations/langtons_ant/Ant.cpp.s
@@ -376,35 +401,122 @@ models/simulations/langtons_ant/Ant.s: models/simulations/langtons_ant/Ant.cpp.s
 
 # target to generate assembly for a file
 models/simulations/langtons_ant/Ant.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_GradualGradient.dir\build.make CMakeFiles/Test_GradualGradient.dir/models/simulations/langtons_ant/Ant.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_AntGeneral.dir\build.make CMakeFiles/Test_AntGeneral.dir/models/simulations/langtons_ant/Ant.cpp.s
 .PHONY : models/simulations/langtons_ant/Ant.cpp.s
 
-models/simulations/langtons_ant/AntPosition.obj: models/simulations/langtons_ant/AntPosition.cpp.obj
+models/simulations/langtons_ant/AntDataService.obj: models/simulations/langtons_ant/AntDataService.cpp.obj
 
-.PHONY : models/simulations/langtons_ant/AntPosition.obj
+.PHONY : models/simulations/langtons_ant/AntDataService.obj
 
 # target to build an object file
-models/simulations/langtons_ant/AntPosition.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_GradualGradient.dir\build.make CMakeFiles/Test_GradualGradient.dir/models/simulations/langtons_ant/AntPosition.cpp.obj
-.PHONY : models/simulations/langtons_ant/AntPosition.cpp.obj
+models/simulations/langtons_ant/AntDataService.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_AntGeneral.dir\build.make CMakeFiles/Test_AntGeneral.dir/models/simulations/langtons_ant/AntDataService.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_BxFactory.dir\build.make CMakeFiles/Test_BxFactory.dir/models/simulations/langtons_ant/AntDataService.cpp.obj
+.PHONY : models/simulations/langtons_ant/AntDataService.cpp.obj
 
-models/simulations/langtons_ant/AntPosition.i: models/simulations/langtons_ant/AntPosition.cpp.i
+models/simulations/langtons_ant/AntDataService.i: models/simulations/langtons_ant/AntDataService.cpp.i
 
-.PHONY : models/simulations/langtons_ant/AntPosition.i
+.PHONY : models/simulations/langtons_ant/AntDataService.i
 
 # target to preprocess a source file
-models/simulations/langtons_ant/AntPosition.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_GradualGradient.dir\build.make CMakeFiles/Test_GradualGradient.dir/models/simulations/langtons_ant/AntPosition.cpp.i
-.PHONY : models/simulations/langtons_ant/AntPosition.cpp.i
+models/simulations/langtons_ant/AntDataService.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_AntGeneral.dir\build.make CMakeFiles/Test_AntGeneral.dir/models/simulations/langtons_ant/AntDataService.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_BxFactory.dir\build.make CMakeFiles/Test_BxFactory.dir/models/simulations/langtons_ant/AntDataService.cpp.i
+.PHONY : models/simulations/langtons_ant/AntDataService.cpp.i
 
-models/simulations/langtons_ant/AntPosition.s: models/simulations/langtons_ant/AntPosition.cpp.s
+models/simulations/langtons_ant/AntDataService.s: models/simulations/langtons_ant/AntDataService.cpp.s
 
-.PHONY : models/simulations/langtons_ant/AntPosition.s
+.PHONY : models/simulations/langtons_ant/AntDataService.s
 
 # target to generate assembly for a file
-models/simulations/langtons_ant/AntPosition.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_GradualGradient.dir\build.make CMakeFiles/Test_GradualGradient.dir/models/simulations/langtons_ant/AntPosition.cpp.s
-.PHONY : models/simulations/langtons_ant/AntPosition.cpp.s
+models/simulations/langtons_ant/AntDataService.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_AntGeneral.dir\build.make CMakeFiles/Test_AntGeneral.dir/models/simulations/langtons_ant/AntDataService.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_BxFactory.dir\build.make CMakeFiles/Test_BxFactory.dir/models/simulations/langtons_ant/AntDataService.cpp.s
+.PHONY : models/simulations/langtons_ant/AntDataService.cpp.s
+
+models/simulations/langtons_ant/AntFactory.obj: models/simulations/langtons_ant/AntFactory.cpp.obj
+
+.PHONY : models/simulations/langtons_ant/AntFactory.obj
+
+# target to build an object file
+models/simulations/langtons_ant/AntFactory.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_AntGeneral.dir\build.make CMakeFiles/Test_AntGeneral.dir/models/simulations/langtons_ant/AntFactory.cpp.obj
+.PHONY : models/simulations/langtons_ant/AntFactory.cpp.obj
+
+models/simulations/langtons_ant/AntFactory.i: models/simulations/langtons_ant/AntFactory.cpp.i
+
+.PHONY : models/simulations/langtons_ant/AntFactory.i
+
+# target to preprocess a source file
+models/simulations/langtons_ant/AntFactory.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_AntGeneral.dir\build.make CMakeFiles/Test_AntGeneral.dir/models/simulations/langtons_ant/AntFactory.cpp.i
+.PHONY : models/simulations/langtons_ant/AntFactory.cpp.i
+
+models/simulations/langtons_ant/AntFactory.s: models/simulations/langtons_ant/AntFactory.cpp.s
+
+.PHONY : models/simulations/langtons_ant/AntFactory.s
+
+# target to generate assembly for a file
+models/simulations/langtons_ant/AntFactory.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_AntGeneral.dir\build.make CMakeFiles/Test_AntGeneral.dir/models/simulations/langtons_ant/AntFactory.cpp.s
+.PHONY : models/simulations/langtons_ant/AntFactory.cpp.s
+
+models/simulations/langtons_ant/BehaviorFactory.obj: models/simulations/langtons_ant/BehaviorFactory.cpp.obj
+
+.PHONY : models/simulations/langtons_ant/BehaviorFactory.obj
+
+# target to build an object file
+models/simulations/langtons_ant/BehaviorFactory.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_AntGeneral.dir\build.make CMakeFiles/Test_AntGeneral.dir/models/simulations/langtons_ant/BehaviorFactory.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_BxFactory.dir\build.make CMakeFiles/Test_BxFactory.dir/models/simulations/langtons_ant/BehaviorFactory.cpp.obj
+.PHONY : models/simulations/langtons_ant/BehaviorFactory.cpp.obj
+
+models/simulations/langtons_ant/BehaviorFactory.i: models/simulations/langtons_ant/BehaviorFactory.cpp.i
+
+.PHONY : models/simulations/langtons_ant/BehaviorFactory.i
+
+# target to preprocess a source file
+models/simulations/langtons_ant/BehaviorFactory.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_AntGeneral.dir\build.make CMakeFiles/Test_AntGeneral.dir/models/simulations/langtons_ant/BehaviorFactory.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_BxFactory.dir\build.make CMakeFiles/Test_BxFactory.dir/models/simulations/langtons_ant/BehaviorFactory.cpp.i
+.PHONY : models/simulations/langtons_ant/BehaviorFactory.cpp.i
+
+models/simulations/langtons_ant/BehaviorFactory.s: models/simulations/langtons_ant/BehaviorFactory.cpp.s
+
+.PHONY : models/simulations/langtons_ant/BehaviorFactory.s
+
+# target to generate assembly for a file
+models/simulations/langtons_ant/BehaviorFactory.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_AntGeneral.dir\build.make CMakeFiles/Test_AntGeneral.dir/models/simulations/langtons_ant/BehaviorFactory.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_BxFactory.dir\build.make CMakeFiles/Test_BxFactory.dir/models/simulations/langtons_ant/BehaviorFactory.cpp.s
+.PHONY : models/simulations/langtons_ant/BehaviorFactory.cpp.s
+
+models/simulations/langtons_ant/BigAnt.obj: models/simulations/langtons_ant/BigAnt.cpp.obj
+
+.PHONY : models/simulations/langtons_ant/BigAnt.obj
+
+# target to build an object file
+models/simulations/langtons_ant/BigAnt.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_AntGeneral.dir\build.make CMakeFiles/Test_AntGeneral.dir/models/simulations/langtons_ant/BigAnt.cpp.obj
+.PHONY : models/simulations/langtons_ant/BigAnt.cpp.obj
+
+models/simulations/langtons_ant/BigAnt.i: models/simulations/langtons_ant/BigAnt.cpp.i
+
+.PHONY : models/simulations/langtons_ant/BigAnt.i
+
+# target to preprocess a source file
+models/simulations/langtons_ant/BigAnt.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_AntGeneral.dir\build.make CMakeFiles/Test_AntGeneral.dir/models/simulations/langtons_ant/BigAnt.cpp.i
+.PHONY : models/simulations/langtons_ant/BigAnt.cpp.i
+
+models/simulations/langtons_ant/BigAnt.s: models/simulations/langtons_ant/BigAnt.cpp.s
+
+.PHONY : models/simulations/langtons_ant/BigAnt.s
+
+# target to generate assembly for a file
+models/simulations/langtons_ant/BigAnt.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_AntGeneral.dir\build.make CMakeFiles/Test_AntGeneral.dir/models/simulations/langtons_ant/BigAnt.cpp.s
+.PHONY : models/simulations/langtons_ant/BigAnt.cpp.s
 
 models/simulations/langtons_ant/EdgeBehavior.obj: models/simulations/langtons_ant/EdgeBehavior.cpp.obj
 
@@ -412,7 +524,10 @@ models/simulations/langtons_ant/EdgeBehavior.obj: models/simulations/langtons_an
 
 # target to build an object file
 models/simulations/langtons_ant/EdgeBehavior.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_AntBehavior.dir\build.make CMakeFiles/Test_AntBehavior.dir/models/simulations/langtons_ant/EdgeBehavior.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\quick_test.dir\build.make CMakeFiles/quick_test.dir/models/simulations/langtons_ant/EdgeBehavior.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_AntGeneral.dir\build.make CMakeFiles/Test_AntGeneral.dir/models/simulations/langtons_ant/EdgeBehavior.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_BxFactory.dir\build.make CMakeFiles/Test_BxFactory.dir/models/simulations/langtons_ant/EdgeBehavior.cpp.obj
 .PHONY : models/simulations/langtons_ant/EdgeBehavior.cpp.obj
 
 models/simulations/langtons_ant/EdgeBehavior.i: models/simulations/langtons_ant/EdgeBehavior.cpp.i
@@ -421,7 +536,10 @@ models/simulations/langtons_ant/EdgeBehavior.i: models/simulations/langtons_ant/
 
 # target to preprocess a source file
 models/simulations/langtons_ant/EdgeBehavior.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_AntBehavior.dir\build.make CMakeFiles/Test_AntBehavior.dir/models/simulations/langtons_ant/EdgeBehavior.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\quick_test.dir\build.make CMakeFiles/quick_test.dir/models/simulations/langtons_ant/EdgeBehavior.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_AntGeneral.dir\build.make CMakeFiles/Test_AntGeneral.dir/models/simulations/langtons_ant/EdgeBehavior.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_BxFactory.dir\build.make CMakeFiles/Test_BxFactory.dir/models/simulations/langtons_ant/EdgeBehavior.cpp.i
 .PHONY : models/simulations/langtons_ant/EdgeBehavior.cpp.i
 
 models/simulations/langtons_ant/EdgeBehavior.s: models/simulations/langtons_ant/EdgeBehavior.cpp.s
@@ -430,7 +548,10 @@ models/simulations/langtons_ant/EdgeBehavior.s: models/simulations/langtons_ant/
 
 # target to generate assembly for a file
 models/simulations/langtons_ant/EdgeBehavior.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_AntBehavior.dir\build.make CMakeFiles/Test_AntBehavior.dir/models/simulations/langtons_ant/EdgeBehavior.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\quick_test.dir\build.make CMakeFiles/quick_test.dir/models/simulations/langtons_ant/EdgeBehavior.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_AntGeneral.dir\build.make CMakeFiles/Test_AntGeneral.dir/models/simulations/langtons_ant/EdgeBehavior.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_BxFactory.dir\build.make CMakeFiles/Test_BxFactory.dir/models/simulations/langtons_ant/EdgeBehavior.cpp.s
 .PHONY : models/simulations/langtons_ant/EdgeBehavior.cpp.s
 
 models/simulations/langtons_ant/MoveBehavior.obj: models/simulations/langtons_ant/MoveBehavior.cpp.obj
@@ -439,7 +560,10 @@ models/simulations/langtons_ant/MoveBehavior.obj: models/simulations/langtons_an
 
 # target to build an object file
 models/simulations/langtons_ant/MoveBehavior.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_AntBehavior.dir\build.make CMakeFiles/Test_AntBehavior.dir/models/simulations/langtons_ant/MoveBehavior.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\quick_test.dir\build.make CMakeFiles/quick_test.dir/models/simulations/langtons_ant/MoveBehavior.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_AntGeneral.dir\build.make CMakeFiles/Test_AntGeneral.dir/models/simulations/langtons_ant/MoveBehavior.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_BxFactory.dir\build.make CMakeFiles/Test_BxFactory.dir/models/simulations/langtons_ant/MoveBehavior.cpp.obj
 .PHONY : models/simulations/langtons_ant/MoveBehavior.cpp.obj
 
 models/simulations/langtons_ant/MoveBehavior.i: models/simulations/langtons_ant/MoveBehavior.cpp.i
@@ -448,7 +572,10 @@ models/simulations/langtons_ant/MoveBehavior.i: models/simulations/langtons_ant/
 
 # target to preprocess a source file
 models/simulations/langtons_ant/MoveBehavior.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_AntBehavior.dir\build.make CMakeFiles/Test_AntBehavior.dir/models/simulations/langtons_ant/MoveBehavior.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\quick_test.dir\build.make CMakeFiles/quick_test.dir/models/simulations/langtons_ant/MoveBehavior.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_AntGeneral.dir\build.make CMakeFiles/Test_AntGeneral.dir/models/simulations/langtons_ant/MoveBehavior.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_BxFactory.dir\build.make CMakeFiles/Test_BxFactory.dir/models/simulations/langtons_ant/MoveBehavior.cpp.i
 .PHONY : models/simulations/langtons_ant/MoveBehavior.cpp.i
 
 models/simulations/langtons_ant/MoveBehavior.s: models/simulations/langtons_ant/MoveBehavior.cpp.s
@@ -457,7 +584,10 @@ models/simulations/langtons_ant/MoveBehavior.s: models/simulations/langtons_ant/
 
 # target to generate assembly for a file
 models/simulations/langtons_ant/MoveBehavior.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_AntBehavior.dir\build.make CMakeFiles/Test_AntBehavior.dir/models/simulations/langtons_ant/MoveBehavior.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\quick_test.dir\build.make CMakeFiles/quick_test.dir/models/simulations/langtons_ant/MoveBehavior.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_AntGeneral.dir\build.make CMakeFiles/Test_AntGeneral.dir/models/simulations/langtons_ant/MoveBehavior.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_BxFactory.dir\build.make CMakeFiles/Test_BxFactory.dir/models/simulations/langtons_ant/MoveBehavior.cpp.s
 .PHONY : models/simulations/langtons_ant/MoveBehavior.cpp.s
 
 models/simulations/langtons_ant/TurnBehavior.obj: models/simulations/langtons_ant/TurnBehavior.cpp.obj
@@ -466,7 +596,10 @@ models/simulations/langtons_ant/TurnBehavior.obj: models/simulations/langtons_an
 
 # target to build an object file
 models/simulations/langtons_ant/TurnBehavior.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_AntBehavior.dir\build.make CMakeFiles/Test_AntBehavior.dir/models/simulations/langtons_ant/TurnBehavior.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\quick_test.dir\build.make CMakeFiles/quick_test.dir/models/simulations/langtons_ant/TurnBehavior.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_AntGeneral.dir\build.make CMakeFiles/Test_AntGeneral.dir/models/simulations/langtons_ant/TurnBehavior.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_BxFactory.dir\build.make CMakeFiles/Test_BxFactory.dir/models/simulations/langtons_ant/TurnBehavior.cpp.obj
 .PHONY : models/simulations/langtons_ant/TurnBehavior.cpp.obj
 
 models/simulations/langtons_ant/TurnBehavior.i: models/simulations/langtons_ant/TurnBehavior.cpp.i
@@ -475,7 +608,10 @@ models/simulations/langtons_ant/TurnBehavior.i: models/simulations/langtons_ant/
 
 # target to preprocess a source file
 models/simulations/langtons_ant/TurnBehavior.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_AntBehavior.dir\build.make CMakeFiles/Test_AntBehavior.dir/models/simulations/langtons_ant/TurnBehavior.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\quick_test.dir\build.make CMakeFiles/quick_test.dir/models/simulations/langtons_ant/TurnBehavior.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_AntGeneral.dir\build.make CMakeFiles/Test_AntGeneral.dir/models/simulations/langtons_ant/TurnBehavior.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_BxFactory.dir\build.make CMakeFiles/Test_BxFactory.dir/models/simulations/langtons_ant/TurnBehavior.cpp.i
 .PHONY : models/simulations/langtons_ant/TurnBehavior.cpp.i
 
 models/simulations/langtons_ant/TurnBehavior.s: models/simulations/langtons_ant/TurnBehavior.cpp.s
@@ -484,7 +620,10 @@ models/simulations/langtons_ant/TurnBehavior.s: models/simulations/langtons_ant/
 
 # target to generate assembly for a file
 models/simulations/langtons_ant/TurnBehavior.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_AntBehavior.dir\build.make CMakeFiles/Test_AntBehavior.dir/models/simulations/langtons_ant/TurnBehavior.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\quick_test.dir\build.make CMakeFiles/quick_test.dir/models/simulations/langtons_ant/TurnBehavior.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_AntGeneral.dir\build.make CMakeFiles/Test_AntGeneral.dir/models/simulations/langtons_ant/TurnBehavior.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_BxFactory.dir\build.make CMakeFiles/Test_BxFactory.dir/models/simulations/langtons_ant/TurnBehavior.cpp.s
 .PHONY : models/simulations/langtons_ant/TurnBehavior.cpp.s
 
 services/DataState.obj: services/DataState.cpp.obj
@@ -495,6 +634,7 @@ services/DataState.obj: services/DataState.cpp.obj
 services/DataState.cpp.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_SimGeneral.dir\build.make CMakeFiles/Test_SimGeneral.dir/services/DataState.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_RandomPixel.dir\build.make CMakeFiles/Test_RandomPixel.dir/services/DataState.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_DataState.dir\build.make CMakeFiles/Test_DataState.dir/services/DataState.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_GradualGradient.dir\build.make CMakeFiles/Test_GradualGradient.dir/services/DataState.cpp.obj
 .PHONY : services/DataState.cpp.obj
 
@@ -506,6 +646,7 @@ services/DataState.i: services/DataState.cpp.i
 services/DataState.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_SimGeneral.dir\build.make CMakeFiles/Test_SimGeneral.dir/services/DataState.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_RandomPixel.dir\build.make CMakeFiles/Test_RandomPixel.dir/services/DataState.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_DataState.dir\build.make CMakeFiles/Test_DataState.dir/services/DataState.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_GradualGradient.dir\build.make CMakeFiles/Test_GradualGradient.dir/services/DataState.cpp.i
 .PHONY : services/DataState.cpp.i
 
@@ -517,35 +658,90 @@ services/DataState.s: services/DataState.cpp.s
 services/DataState.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_SimGeneral.dir\build.make CMakeFiles/Test_SimGeneral.dir/services/DataState.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_RandomPixel.dir\build.make CMakeFiles/Test_RandomPixel.dir/services/DataState.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_DataState.dir\build.make CMakeFiles/Test_DataState.dir/services/DataState.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_GradualGradient.dir\build.make CMakeFiles/Test_GradualGradient.dir/services/DataState.cpp.s
 .PHONY : services/DataState.cpp.s
 
-tests/AntUnitTestSuite.obj: tests/AntUnitTestSuite.cpp.obj
+tests/AntBehaviorsUnitTestSuite.obj: tests/AntBehaviorsUnitTestSuite.cpp.obj
 
-.PHONY : tests/AntUnitTestSuite.obj
+.PHONY : tests/AntBehaviorsUnitTestSuite.obj
 
 # target to build an object file
-tests/AntUnitTestSuite.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_AntGeneral.dir\build.make CMakeFiles/Test_AntGeneral.dir/tests/AntUnitTestSuite.cpp.obj
-.PHONY : tests/AntUnitTestSuite.cpp.obj
+tests/AntBehaviorsUnitTestSuite.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_AntBehavior.dir\build.make CMakeFiles/Test_AntBehavior.dir/tests/AntBehaviorsUnitTestSuite.cpp.obj
+.PHONY : tests/AntBehaviorsUnitTestSuite.cpp.obj
 
-tests/AntUnitTestSuite.i: tests/AntUnitTestSuite.cpp.i
+tests/AntBehaviorsUnitTestSuite.i: tests/AntBehaviorsUnitTestSuite.cpp.i
 
-.PHONY : tests/AntUnitTestSuite.i
+.PHONY : tests/AntBehaviorsUnitTestSuite.i
 
 # target to preprocess a source file
-tests/AntUnitTestSuite.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_AntGeneral.dir\build.make CMakeFiles/Test_AntGeneral.dir/tests/AntUnitTestSuite.cpp.i
-.PHONY : tests/AntUnitTestSuite.cpp.i
+tests/AntBehaviorsUnitTestSuite.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_AntBehavior.dir\build.make CMakeFiles/Test_AntBehavior.dir/tests/AntBehaviorsUnitTestSuite.cpp.i
+.PHONY : tests/AntBehaviorsUnitTestSuite.cpp.i
 
-tests/AntUnitTestSuite.s: tests/AntUnitTestSuite.cpp.s
+tests/AntBehaviorsUnitTestSuite.s: tests/AntBehaviorsUnitTestSuite.cpp.s
 
-.PHONY : tests/AntUnitTestSuite.s
+.PHONY : tests/AntBehaviorsUnitTestSuite.s
 
 # target to generate assembly for a file
-tests/AntUnitTestSuite.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_AntGeneral.dir\build.make CMakeFiles/Test_AntGeneral.dir/tests/AntUnitTestSuite.cpp.s
-.PHONY : tests/AntUnitTestSuite.cpp.s
+tests/AntBehaviorsUnitTestSuite.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_AntBehavior.dir\build.make CMakeFiles/Test_AntBehavior.dir/tests/AntBehaviorsUnitTestSuite.cpp.s
+.PHONY : tests/AntBehaviorsUnitTestSuite.cpp.s
+
+tests/BehaviorFactoryTests.obj: tests/BehaviorFactoryTests.cpp.obj
+
+.PHONY : tests/BehaviorFactoryTests.obj
+
+# target to build an object file
+tests/BehaviorFactoryTests.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_BxFactory.dir\build.make CMakeFiles/Test_BxFactory.dir/tests/BehaviorFactoryTests.cpp.obj
+.PHONY : tests/BehaviorFactoryTests.cpp.obj
+
+tests/BehaviorFactoryTests.i: tests/BehaviorFactoryTests.cpp.i
+
+.PHONY : tests/BehaviorFactoryTests.i
+
+# target to preprocess a source file
+tests/BehaviorFactoryTests.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_BxFactory.dir\build.make CMakeFiles/Test_BxFactory.dir/tests/BehaviorFactoryTests.cpp.i
+.PHONY : tests/BehaviorFactoryTests.cpp.i
+
+tests/BehaviorFactoryTests.s: tests/BehaviorFactoryTests.cpp.s
+
+.PHONY : tests/BehaviorFactoryTests.s
+
+# target to generate assembly for a file
+tests/BehaviorFactoryTests.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_BxFactory.dir\build.make CMakeFiles/Test_BxFactory.dir/tests/BehaviorFactoryTests.cpp.s
+.PHONY : tests/BehaviorFactoryTests.cpp.s
+
+tests/DataStateTests.obj: tests/DataStateTests.cpp.obj
+
+.PHONY : tests/DataStateTests.obj
+
+# target to build an object file
+tests/DataStateTests.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_DataState.dir\build.make CMakeFiles/Test_DataState.dir/tests/DataStateTests.cpp.obj
+.PHONY : tests/DataStateTests.cpp.obj
+
+tests/DataStateTests.i: tests/DataStateTests.cpp.i
+
+.PHONY : tests/DataStateTests.i
+
+# target to preprocess a source file
+tests/DataStateTests.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_DataState.dir\build.make CMakeFiles/Test_DataState.dir/tests/DataStateTests.cpp.i
+.PHONY : tests/DataStateTests.cpp.i
+
+tests/DataStateTests.s: tests/DataStateTests.cpp.s
+
+.PHONY : tests/DataStateTests.s
+
+# target to generate assembly for a file
+tests/DataStateTests.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_DataState.dir\build.make CMakeFiles/Test_DataState.dir/tests/DataStateTests.cpp.s
+.PHONY : tests/DataStateTests.cpp.s
 
 tests/GradualGradientTests.obj: tests/GradualGradientTests.cpp.obj
 
@@ -601,6 +797,33 @@ tests/RandomPixelAnimTest.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_RandomPixel.dir\build.make CMakeFiles/Test_RandomPixel.dir/tests/RandomPixelAnimTest.cpp.s
 .PHONY : tests/RandomPixelAnimTest.cpp.s
 
+tests/quick_test.obj: tests/quick_test.cpp.obj
+
+.PHONY : tests/quick_test.obj
+
+# target to build an object file
+tests/quick_test.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\quick_test.dir\build.make CMakeFiles/quick_test.dir/tests/quick_test.cpp.obj
+.PHONY : tests/quick_test.cpp.obj
+
+tests/quick_test.i: tests/quick_test.cpp.i
+
+.PHONY : tests/quick_test.i
+
+# target to preprocess a source file
+tests/quick_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\quick_test.dir\build.make CMakeFiles/quick_test.dir/tests/quick_test.cpp.i
+.PHONY : tests/quick_test.cpp.i
+
+tests/quick_test.s: tests/quick_test.cpp.s
+
+.PHONY : tests/quick_test.s
+
+# target to generate assembly for a file
+tests/quick_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\quick_test.dir\build.make CMakeFiles/quick_test.dir/tests/quick_test.cpp.s
+.PHONY : tests/quick_test.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -609,16 +832,17 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... Test_AntBehavior
 	@echo ... Test_AntGeneral
+	@echo ... Test_BxFactory
+	@echo ... Test_DataState
 	@echo ... Test_GradualGradient
 	@echo ... Test_RandomPixel
 	@echo ... Test_SimGeneral
+	@echo ... quick_test
 	@echo ... models/Model.obj
 	@echo ... models/Model.i
 	@echo ... models/Model.s
-	@echo ... models/PositionFactory.obj
-	@echo ... models/PositionFactory.i
-	@echo ... models/PositionFactory.s
 	@echo ... models/animations/Animation.obj
 	@echo ... models/animations/Animation.i
 	@echo ... models/animations/Animation.s
@@ -634,9 +858,18 @@ help:
 	@echo ... models/simulations/langtons_ant/Ant.obj
 	@echo ... models/simulations/langtons_ant/Ant.i
 	@echo ... models/simulations/langtons_ant/Ant.s
-	@echo ... models/simulations/langtons_ant/AntPosition.obj
-	@echo ... models/simulations/langtons_ant/AntPosition.i
-	@echo ... models/simulations/langtons_ant/AntPosition.s
+	@echo ... models/simulations/langtons_ant/AntDataService.obj
+	@echo ... models/simulations/langtons_ant/AntDataService.i
+	@echo ... models/simulations/langtons_ant/AntDataService.s
+	@echo ... models/simulations/langtons_ant/AntFactory.obj
+	@echo ... models/simulations/langtons_ant/AntFactory.i
+	@echo ... models/simulations/langtons_ant/AntFactory.s
+	@echo ... models/simulations/langtons_ant/BehaviorFactory.obj
+	@echo ... models/simulations/langtons_ant/BehaviorFactory.i
+	@echo ... models/simulations/langtons_ant/BehaviorFactory.s
+	@echo ... models/simulations/langtons_ant/BigAnt.obj
+	@echo ... models/simulations/langtons_ant/BigAnt.i
+	@echo ... models/simulations/langtons_ant/BigAnt.s
 	@echo ... models/simulations/langtons_ant/EdgeBehavior.obj
 	@echo ... models/simulations/langtons_ant/EdgeBehavior.i
 	@echo ... models/simulations/langtons_ant/EdgeBehavior.s
@@ -649,15 +882,24 @@ help:
 	@echo ... services/DataState.obj
 	@echo ... services/DataState.i
 	@echo ... services/DataState.s
-	@echo ... tests/AntUnitTestSuite.obj
-	@echo ... tests/AntUnitTestSuite.i
-	@echo ... tests/AntUnitTestSuite.s
+	@echo ... tests/AntBehaviorsUnitTestSuite.obj
+	@echo ... tests/AntBehaviorsUnitTestSuite.i
+	@echo ... tests/AntBehaviorsUnitTestSuite.s
+	@echo ... tests/BehaviorFactoryTests.obj
+	@echo ... tests/BehaviorFactoryTests.i
+	@echo ... tests/BehaviorFactoryTests.s
+	@echo ... tests/DataStateTests.obj
+	@echo ... tests/DataStateTests.i
+	@echo ... tests/DataStateTests.s
 	@echo ... tests/GradualGradientTests.obj
 	@echo ... tests/GradualGradientTests.i
 	@echo ... tests/GradualGradientTests.s
 	@echo ... tests/RandomPixelAnimTest.obj
 	@echo ... tests/RandomPixelAnimTest.i
 	@echo ... tests/RandomPixelAnimTest.s
+	@echo ... tests/quick_test.obj
+	@echo ... tests/quick_test.i
+	@echo ... tests/quick_test.s
 .PHONY : help
 
 

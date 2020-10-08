@@ -14,6 +14,8 @@ enum Direction {
     NUM_DIRECTIONS = LEFT + 1
 };
 
+const std::pair<int, int> REMOVE_ANT_SIGNAL = std::make_pair(-1,-1);
+
 const std::pair<int, int> DIR_SHIFT_VALUES[] = {
         std::make_pair(-1,0),
         std::make_pair(0,1),

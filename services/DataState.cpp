@@ -176,7 +176,10 @@ void LEDBoard::DataState::printBoard() {
     std::cout<<std::endl;
 }
 
-LEDBoard::DataState::~DataState() = default;
+LEDBoard::DataState::~DataState() {
+    state = nullptr;
+    numReferences = 0;
+};
 
 LEDBoard::DataState *LEDBoard::DataState::getInstance() {
     if(state == nullptr) {
@@ -204,11 +207,14 @@ LEDBoard::DataState *LEDBoard::DataState::getInstance(int defaultColor, int numP
     return state;
 }
 
-void LEDBoard::DataState::releaseReference() {
-    numReferences--;
-    if(numReferences == 0){
+LEDBoard::DataState* LEDBoard::DataState::releaseReference() {
+    if (numReferences > 0) {
+        numReferences--;
+    } else if (numReferences == 0) {
         delete state;
     }
+
+    return nullptr;
 }
 
 void LEDBoard::DataState::setDefaultColor(int color) {
