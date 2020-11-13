@@ -1,7 +1,6 @@
-//
-// Created by theom on 10/7/2020.
-//
-
+/****************************************************************************************
+ *
+ ***************************************************************************************/
 #include "BigAnt.hpp"
 
 BigAnt::BigAnt(int size, std::pair<int, int> pos, Direction dir, Behaviors bx, LEDBoard::Colors color)

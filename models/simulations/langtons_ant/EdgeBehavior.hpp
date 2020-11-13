@@ -1,11 +1,10 @@
 /******************************************************************************
- * This hpp declares a set oc classes to determine how hitting the edge of the
+ * This hpp declares a set of classes to determine how hitting the edge of the
  * board is handled in this highly customizable langton's ant implementation
  *****************************************************************************/
 
 #ifndef LED_BOARD_PROGRAM_EDGEBEHAVIOR_HPP
 #define LED_BOARD_PROGRAM_EDGEBEHAVIOR_HPP
-
 
 #include "TurnBehavior.hpp"
 #include "MoveBehavior.hpp"
@@ -15,12 +14,12 @@
 
 // enum for behavior type selection in files that reference this set of classes
 enum EdgeType {
-    WALL,
-    TELEPORT,
-    DEATH,
-    REMOVE,
-    UTURN,
-    RANDOM_TELEPORT
+    TELEPORT = 0,
+    WALL = 1,
+    UTURN = 2,
+    DEATH = 3,
+    REMOVE = 4,
+    RANDOM_TELEPORT = REMOVE + 1
 };
 
 /******************************************************************************
@@ -36,8 +35,8 @@ protected:
     virtual std::pair<int, int> adjustPos(std::pair<int, int> nextPos, int size);
 public:
     EdgeBehavior();
-    EdgeBehavior(MoveBehavior *moveBx);
-    EdgeBehavior(TurnBehavior *turnBx);
+    explicit EdgeBehavior(MoveBehavior *moveBx);
+    explicit EdgeBehavior(TurnBehavior *turnBx);
     EdgeBehavior(MoveBehavior *moveBx, TurnBehavior *turnBx);
     virtual ~EdgeBehavior() = default;
     bool isEdge(std::pair<int, int> curPos, Direction direction, int size = 1);
@@ -60,8 +59,8 @@ private:
     std::pair<int, int> adjustPos(std::pair<int, int> nextPos, int size) override;
 public:
     Teleport();
-    Teleport(MoveBehavior *moveBx);
-    Teleport(TurnBehavior *turnBx);
+    explicit Teleport(MoveBehavior *moveBx);
+    explicit Teleport(TurnBehavior *turnBx);
     Teleport(MoveBehavior *moveBx, TurnBehavior *turnBx);
     std::pair<int, int> handleEdge(std::pair<int, int> curPos, Direction &direction, int colorVal, int size) override;
 };
@@ -73,8 +72,8 @@ public:
 class UTurn : public EdgeBehavior {
 public:
     UTurn();
-    UTurn(MoveBehavior *moveBx);
-    UTurn(TurnBehavior *turnBx);
+    explicit UTurn(MoveBehavior *moveBx);
+    explicit UTurn(TurnBehavior *turnBx);
     UTurn(MoveBehavior *moveBx, TurnBehavior *turnBx);
     std::pair<int, int> handleEdge(std::pair<int, int> curPos, Direction &direction, int colorVal, int size) override;
 };
@@ -89,8 +88,8 @@ private:
 
 public:
     explicit Death(bool remove = false);
-    Death(MoveBehavior *moveBx, bool remove = false);
-    Death(TurnBehavior *turnBx, bool remove = false);
+    explicit Death(MoveBehavior *moveBx, bool remove = false);
+    explicit Death(TurnBehavior *turnBx, bool remove = false);
     Death(MoveBehavior *moveBx, TurnBehavior *turnBx, bool remove = false);
     std::pair<int, int> handleEdge(std::pair<int, int> curPos, Direction &direction, int colorVal, int size) override;
 };
@@ -102,8 +101,8 @@ public:
 class Wall : public EdgeBehavior {
 public:
     Wall();
-    Wall(MoveBehavior *moveBx);
-    Wall(TurnBehavior *turnBx);
+    explicit Wall(MoveBehavior *moveBx);
+    explicit Wall(TurnBehavior *turnBx);
     Wall(MoveBehavior *moveBx, TurnBehavior *turnBx);
     std::pair<int, int> handleEdge(std::pair<int, int> curPos, Direction &direction, int colorVal, int size) override;
 };
@@ -120,8 +119,8 @@ private:
 
 public:
     explicit RandomTeleport(int antSize = 1);
-    RandomTeleport(MoveBehavior *moveBx, int antSize = 1);
-    RandomTeleport(TurnBehavior *turnBx, int antSize = 1);
+    explicit RandomTeleport(MoveBehavior *moveBx, int antSize = 1);
+    explicit RandomTeleport(TurnBehavior *turnBx, int antSize = 1);
     RandomTeleport(MoveBehavior *moveBx, TurnBehavior *turnBx, int antSize = 1);
     std::pair<int, int> handleEdge(std::pair<int, int> curPos, Direction &direction, int colorVal, int size) override;
 };

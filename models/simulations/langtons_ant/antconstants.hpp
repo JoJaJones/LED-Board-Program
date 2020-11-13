@@ -1,7 +1,6 @@
-//
-// Created by theom on 10/6/2020.
-//
-
+/****************************************************************************************
+ *
+ ***************************************************************************************/
 #ifndef LED_BOARD_PROGRAM_ANTCONSTANTS_HPP
 #define LED_BOARD_PROGRAM_ANTCONSTANTS_HPP
 #include <utility>

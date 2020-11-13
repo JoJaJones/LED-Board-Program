@@ -1,6 +1,6 @@
-//
-// Created by theom on 10/6/2020.
-//
+/***********************************************************************************************************************
+ * This header declares the TurnBehavior class that handles changing the direction of the Ant
+ **********************************************************************************************************************/
 
 #ifndef LED_BOARD_PROGRAM_TURNBEHAVIOR_HPP
 #define LED_BOARD_PROGRAM_TURNBEHAVIOR_HPP

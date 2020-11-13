@@ -1,6 +1,6 @@
-//
-// Created by theom on 10/6/2020.
-//
+/***********************************************************************************************************************
+ * This header declares the MoveBehavior class that handles changing the position of the Ant
+ **********************************************************************************************************************/
 
 #ifndef LED_BOARD_PROGRAM_MOVEBEHAVIOR_HPP
 #define LED_BOARD_PROGRAM_MOVEBEHAVIOR_HPP
