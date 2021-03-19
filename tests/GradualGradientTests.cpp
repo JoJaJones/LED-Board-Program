@@ -6,7 +6,7 @@
 
 int main() {
     auto *state = LEDBoard::DataState::getInstance();
-    LEDBoard::Model<int> *testAnim = new LEDBoard::GradualGradient();
+    LEDBoard::DisplayModel<int> *testAnim = new LEDBoard::GradualGradient();
 
     int count = 1;
     while(count <= 1024 * 3){

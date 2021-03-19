@@ -4,13 +4,13 @@
 #include "Simulation.hpp"
 namespace LEDBoard {
     template <class T>
-    Simulation<T>::Simulation() : Model<T>() {
+    Simulation<T>::Simulation() : DisplayModel<T>() {
         maxStepNum = stepNum = 0;
         runForever = true;
     }
 
     template <class T>
-    Simulation<T>::Simulation(int maxStep) : Model<T>() {
+    Simulation<T>::Simulation(int maxStep) : DisplayModel<T>() {
         stepNum = 0;
         maxStepNum = maxStep;
         runForever = false;

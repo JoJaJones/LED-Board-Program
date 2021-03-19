@@ -5,7 +5,7 @@
 #define LED_BOARD_PROGRAM_GAME_HPP
 
 #include <Position.hpp>
-#include <Model.hpp>
+#include <DisplayModel.hpp>
 
 namespace LEDBoard {
     template <class T>

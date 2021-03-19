@@ -1,5 +1,6 @@
 /****************************************************************************************
- *
+ * Header declaring a class to represent a highly customizable ant in the Langton's Ant
+ * Simulation.
  ***************************************************************************************/
 #ifndef LED_BOARD_PROGRAM_ANT_HPP
 #define LED_BOARD_PROGRAM_ANT_HPP

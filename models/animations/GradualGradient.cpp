@@ -42,7 +42,7 @@ void LEDBoard::GradualGradient::resetBoard() {
 
     Animation::resetBoard(0);
     board[0][0] = 0xffffff;
-    Model::updateBoard();
+    DisplayModel::updateBoard();
     rowColorShift -= 8;
     if(rowColorShift < 0) {
         rowColorShift = 16;

@@ -502,12 +502,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="D:/CLionProjects/LED-Board-Program/models/Model.cpp">
+		<Unit filename="D:/CLionProjects/LED-Board-Program/models/DisplayModel.cpp">
 			<Option target="Test_SimGeneral"/>
 			<Option target="Test_RandomPixel"/>
 			<Option target="Test_GradualGradient"/>
 		</Unit>
-		<Unit filename="D:/CLionProjects/LED-Board-Program/models/Model.hpp">
+		<Unit filename="D:/CLionProjects/LED-Board-Program/models/DisplayModel.hpp">
 			<Option target="Test_SimGeneral"/>
 			<Option target="Test_RandomPixel"/>
 			<Option target="Test_GradualGradient"/>

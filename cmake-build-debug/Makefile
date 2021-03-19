@@ -233,38 +233,38 @@ Test_BxFactory/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_BxFactory.dir\build.make CMakeFiles/Test_BxFactory.dir/build
 .PHONY : Test_BxFactory/fast
 
-models/Model.obj: models/Model.cpp.obj
+models/DisplayModel.obj: models/DisplayModel.cpp.obj
 
-.PHONY : models/Model.obj
+.PHONY : models/DisplayModel.obj
 
 # target to build an object file
-models/Model.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_SimGeneral.dir\build.make CMakeFiles/Test_SimGeneral.dir/models/Model.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_RandomPixel.dir\build.make CMakeFiles/Test_RandomPixel.dir/models/Model.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_GradualGradient.dir\build.make CMakeFiles/Test_GradualGradient.dir/models/Model.cpp.obj
-.PHONY : models/Model.cpp.obj
+models/DisplayModel.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_SimGeneral.dir\build.make CMakeFiles/Test_SimGeneral.dir/models/DisplayModel.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_RandomPixel.dir\build.make CMakeFiles/Test_RandomPixel.dir/models/DisplayModel.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_GradualGradient.dir\build.make CMakeFiles/Test_GradualGradient.dir/models/DisplayModel.cpp.obj
+.PHONY : models/DisplayModel.cpp.obj
 
-models/Model.i: models/Model.cpp.i
+models/DisplayModel.i: models/DisplayModel.cpp.i
 
-.PHONY : models/Model.i
+.PHONY : models/DisplayModel.i
 
 # target to preprocess a source file
-models/Model.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_SimGeneral.dir\build.make CMakeFiles/Test_SimGeneral.dir/models/Model.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_RandomPixel.dir\build.make CMakeFiles/Test_RandomPixel.dir/models/Model.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_GradualGradient.dir\build.make CMakeFiles/Test_GradualGradient.dir/models/Model.cpp.i
-.PHONY : models/Model.cpp.i
+models/DisplayModel.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_SimGeneral.dir\build.make CMakeFiles/Test_SimGeneral.dir/models/DisplayModel.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_RandomPixel.dir\build.make CMakeFiles/Test_RandomPixel.dir/models/DisplayModel.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_GradualGradient.dir\build.make CMakeFiles/Test_GradualGradient.dir/models/DisplayModel.cpp.i
+.PHONY : models/DisplayModel.cpp.i
 
-models/Model.s: models/Model.cpp.s
+models/DisplayModel.s: models/DisplayModel.cpp.s
 
-.PHONY : models/Model.s
+.PHONY : models/DisplayModel.s
 
 # target to generate assembly for a file
-models/Model.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_SimGeneral.dir\build.make CMakeFiles/Test_SimGeneral.dir/models/Model.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_RandomPixel.dir\build.make CMakeFiles/Test_RandomPixel.dir/models/Model.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_GradualGradient.dir\build.make CMakeFiles/Test_GradualGradient.dir/models/Model.cpp.s
-.PHONY : models/Model.cpp.s
+models/DisplayModel.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_SimGeneral.dir\build.make CMakeFiles/Test_SimGeneral.dir/models/DisplayModel.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_RandomPixel.dir\build.make CMakeFiles/Test_RandomPixel.dir/models/DisplayModel.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test_GradualGradient.dir\build.make CMakeFiles/Test_GradualGradient.dir/models/DisplayModel.cpp.s
+.PHONY : models/DisplayModel.cpp.s
 
 models/animations/Animation.obj: models/animations/Animation.cpp.obj
 
@@ -840,9 +840,9 @@ help:
 	@echo ... Test_RandomPixel
 	@echo ... Test_SimGeneral
 	@echo ... quick_test
-	@echo ... models/Model.obj
-	@echo ... models/Model.i
-	@echo ... models/Model.s
+	@echo ... models/DisplayModel.obj
+	@echo ... models/DisplayModel.i
+	@echo ... models/DisplayModel.s
 	@echo ... models/animations/Animation.obj
 	@echo ... models/animations/Animation.i
 	@echo ... models/animations/Animation.s

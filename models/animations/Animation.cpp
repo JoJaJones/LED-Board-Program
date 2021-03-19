@@ -4,11 +4,11 @@
 #include "Animation.hpp"
 
 
-LEDBoard::Animation::Animation() : Model<int>() {
+LEDBoard::Animation::Animation() : DisplayModel<int>() {
     initBoard(0);
 }
 
-LEDBoard::Animation::Animation(int startVal): Model<int>() {
+LEDBoard::Animation::Animation(int startVal): DisplayModel<int>() {
     initBoard(startVal);
 }
 

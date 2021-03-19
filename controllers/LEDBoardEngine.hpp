@@ -5,7 +5,7 @@
 #define LED_BOARD_PROGRAM_LEDBOARDENGINE_HPP
 
 
-#include <Model.hpp>
+#include <DisplayModel.hpp>
 #include <View.hpp>
 #include <DataState.hpp>
 

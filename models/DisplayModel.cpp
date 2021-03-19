@@ -1,13 +1,13 @@
 /****************************************************************************************
  *
  ***************************************************************************************/
-#include "Model.hpp"
+#include "DisplayModel.hpp"
 
 // prevents linker issue when inheriting from the specialized class Animation
-template class LEDBoard::Model<int>;
+template class LEDBoard::DisplayModel<int>;
 
 template <>
-void LEDBoard::Model<int>::updateBoard() {
+void LEDBoard::DisplayModel<int>::updateBoard() {
     int pos[2];
     for (int i = 0; i < board.size(); ++i) {
         for (int j = 0; j < board[0].size(); ++j) {
@@ -19,7 +19,7 @@ void LEDBoard::Model<int>::updateBoard() {
 }
 
 template <class T>
-void LEDBoard::Model<T>::updateBoard() {
+void LEDBoard::DisplayModel<T>::updateBoard() {
     int pos[2];
     for (int i = 0; i < board.size(); ++i) {
         for (int j = 0; j < board[0].size(); ++j) {
@@ -31,18 +31,18 @@ void LEDBoard::Model<T>::updateBoard() {
 }
 
 template <class T>
-void LEDBoard::Model<T>::processFrame() {
+void LEDBoard::DisplayModel<T>::processFrame() {
     processStep();
     updateBoard();
 }
 
 template<class T>
-LEDBoard::Model<T>::~Model() {
+LEDBoard::DisplayModel<T>::~DisplayModel() {
     viewBoard->releaseReference();
 }
 
 template<class T>
-LEDBoard::Model<T>::Model() {
+LEDBoard::DisplayModel<T>::DisplayModel() {
     viewBoard = DataState::getInstance();
 }
 

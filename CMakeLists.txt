@@ -10,17 +10,17 @@ add_executable(Test_DataState
 add_executable(Test_RandomPixel
         tests/RandomPixelAnimTest.cpp
         services/DataState.cpp
-        models/Model.cpp
+        models/DisplayModel.cpp
         models/animations/Animation.cpp
         models/animations/RandomPixels.cpp)
 add_executable(Test_GradualGradient
         tests/GradualGradientTests.cpp
-        services/DataState.cpp models/Model.cpp
+        services/DataState.cpp models/DisplayModel.cpp
         models/animations/Animation.cpp
         models/animations/GradualGradient.cpp)
 add_executable(Test_SimGeneral
         models/simulations/Simulation.cpp
-        services/DataState.cpp models/Model.cpp)
+        services/DataState.cpp models/DisplayModel.cpp)
 add_executable(Test_AntBehavior
         models/simulations/langtons_ant/MoveBehavior.cpp
         models/simulations/langtons_ant/EdgeBehavior.cpp
@@ -49,7 +49,7 @@ add_executable(quick_test
         tests/quick_test.cpp)
 
 #main executable
-#add_executable(LED_Board_Program main.cpp models/Model.cpp models/Model.hpp services/board_constants.hpp views/LEDDisplay.cpp views/LEDDisplay.hpp services/DataState.cpp services/DataState.hpp controllers/LEDBoardEngine.cpp controllers/LEDBoardEngine.hpp views/View.cpp views/View.hpp services/constants.hpp tests/DataStateTests.cpp models/animations/Animation.cpp models/animations/Animation.hpp models/games/Game.cpp models/games/Game.hpp models/Position.cpp models/Position.hpp models/simulations/Simulation.cpp models/simulations/Simulation.hpp models/animations/RandomPixels.cpp models/animations/RandomPixels.hpp tests/RandomPixelAnimTest.cpp)
+#add_executable(LED_Board_Program main.cpp models/DisplayModel.cpp models/DisplayModel.hpp services/board_constants.hpp views/LEDDisplay.cpp views/LEDDisplay.hpp services/DataState.cpp services/DataState.hpp controllers/LEDBoardEngine.cpp controllers/LEDBoardEngine.hpp views/View.cpp views/View.hpp services/constants.hpp tests/DataStateTests.cpp models/animations/Animation.cpp models/animations/Animation.hpp models/games/Game.cpp models/games/Game.hpp models/Position.cpp models/Position.hpp models/simulations/Simulation.cpp models/simulations/Simulation.hpp models/animations/RandomPixels.cpp models/animations/RandomPixels.hpp tests/RandomPixelAnimTest.cpp)
 #add_library(rgbmatrix STATIC lib/lib/bdf-font.cc lib/lib/content-streamer.cc lib/lib/framebuffer.cc lib/lib/gpio.cc lib/lib/graphics.cc
 #        lib/lib/hardware-mapping.c lib/lib/led-matrix.cc lib/lib/multiplex-mappers.cc lib/lib/options-initialize.cc
 #        lib/lib/pixel-mapper.cc lib/lib/thread.cc lib/lib/transformer.cc)

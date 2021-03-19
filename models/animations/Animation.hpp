@@ -4,10 +4,10 @@
 #ifndef LED_BOARD_PROGRAM_ANIMATION_HPP
 #define LED_BOARD_PROGRAM_ANIMATION_HPP
 
-#include <Model.hpp>
+#include <DisplayModel.hpp>
 
 namespace LEDBoard {
-    class Animation : public Model<int> {
+    class Animation : public DisplayModel<int> {
     public:
 
         Animation();
