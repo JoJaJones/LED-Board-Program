@@ -36,6 +36,7 @@ public:
     void setMoveDistance(int distance);
     void setEdgeBx(EdgeBehavior *edgeBehavior);
     void setTurnBehavior(TurnBehavior *turnBehavior);
+    LEDBoard::Colors getColor();
 };
 
 

@@ -17,7 +17,10 @@ private:
 
 public:
     AntPosition();
-
+    bool hasDeadAnts();
+    bool isOccupied() override;
+    std::vector<Ant*> * getOccupants() override;
+    int getColor() override;
 };
 
 

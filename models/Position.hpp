@@ -14,9 +14,11 @@ namespace LEDBoard {
         T occupants;
     public:
         explicit Position(Colors color);
-        virtual void isOccupied() = 0;
+        virtual bool isOccupied() = 0;
         virtual T *getOccupants() = 0;
         virtual int getColor() = 0;
+        virtual void addToPosition(T* element);
+        virtual T *removeFromPosition(int index = 0);
     };
 
     template<class T>

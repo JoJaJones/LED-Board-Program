@@ -147,3 +147,7 @@ void Ant::setTurnBehavior(TurnBehavior *turnBehavior) {
 void Ant::setMoveDistance(int distance) {
     moveBx->setMoveDistance(distance);
 }
+
+LEDBoard::Colors Ant::getColor() {
+    return color;
+}
